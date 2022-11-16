@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 16 04:17:31 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LEFT" LOCATE = SITE "P124" LEVEL 1;
+COMP "CLOCK" LOCATE = SITE "P123" LEVEL 1;
+COMP "RIGHT" LOCATE = SITE "P132" LEVEL 1;
+COMP "VSYNC" LOCATE = SITE "P5" LEVEL 1;
+COMP "MIDDLE" LOCATE = SITE "P127" LEVEL 1;
+COMP "BUZZER" LOCATE = SITE "P83" LEVEL 1;
+COMP "GREEN" LOCATE = SITE "P11" LEVEL 1;
+COMP "BLUE" LOCATE = SITE "P9" LEVEL 1;
+COMP "BUTTON_A" LOCATE = SITE "P47" LEVEL 1;
+COMP "BUTTON_B" LOCATE = SITE "P48" LEVEL 1;
+COMP "HSYNC" LOCATE = SITE "P7" LEVEL 1;
+COMP "RED" LOCATE = SITE "P14" LEVEL 1;
+SCHEMATIC END;
+

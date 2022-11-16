@@ -1,2 +1,0 @@
-xst -intstyle ise -ifn "/home/korn/xilinx/test-vga/test.xst" -ofn "/home/korn/xilinx/test-vga/test.syr" 
-xst -intstyle ise -ifn "/home/korn/xilinx/test-vga/test.xst" -ofn "/home/korn/xilinx/test-vga/test.syr" 
