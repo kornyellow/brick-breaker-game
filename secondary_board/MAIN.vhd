@@ -23,12 +23,51 @@ architecture Behavioral of MAIN is
 
 begin
 
-	process (CLOCK)
+	process (CLOCK) is
+		variable button_debounce_p1_left : natural := 0;
+		variable button_debounce_p1_right : natural := 0;
+		variable button_debounce_p2_left : natural := 0;
+		variable button_debounce_p2_right : natural := 0;
 	begin
-		P1_LEFT_OUT <= P1_LEFT;
-		P1_RIGHT_OUT <= P1_RIGHT;
-		P2_LEFT_OUT <= P2_LEFT;
-		P2_RIGHT_OUT <= P2_RIGHT;
+		if rising_edge(CLOCK) then
+			if P1_LEFT = '0' then
+				button_debounce_p1_left := 10000;
+			end if;
+			if P1_RIGHT = '0' then
+				button_debounce_p1_right := 10000;
+			end if;
+			if P2_LEFT = '0' then
+				button_debounce_p2_left := 10000;
+			end if;
+			if P2_RIGHT = '0' then
+				button_debounce_p2_right := 10000;
+			end if;
+
+			if button_debounce_p1_left > 0 then
+				button_debounce_p1_left := button_debounce_p1_left - 1;
+				P1_LEFT_OUT <= '0';
+			else
+				P1_LEFT_OUT <= '1';
+			end if;
+			if button_debounce_p1_right > 0 then
+				button_debounce_p1_right := button_debounce_p1_right - 1;
+				P1_RIGHT_OUT <= '0';
+			else
+				P1_RIGHT_OUT <= '1';
+			end if;
+			if button_debounce_p2_left > 0 then
+				button_debounce_p2_left := button_debounce_p2_left - 1;
+				P2_LEFT_OUT <= '0';
+			else
+				P2_LEFT_OUT <= '1';
+			end if;
+			if button_debounce_p2_right > 0 then
+				button_debounce_p2_right := button_debounce_p2_right - 1;
+				P2_RIGHT_OUT <= '0';
+			else
+				P2_RIGHT_OUT <= '1';
+			end if;
+		end if;
 	end process;
 
 end Behavioral;

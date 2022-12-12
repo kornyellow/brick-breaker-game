@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-12-10T21:32:27</DateModified>
+  <DateModified>2022-12-11T23:38:15</DateModified>
   <ModuleName>MAIN</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/korn/xilinx/digital-project-pong/secondary_board/iseconfig/MAIN.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/korn/xilinx/digital-project-pong/secondary_board/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/korn/xilinx/digital-project/secondary_board/iseconfig/MAIN.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/korn/xilinx/digital-project/secondary_board/</ImplementationReportsDirectory>
   <DateInitialized>2022-12-10T21:28:28</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

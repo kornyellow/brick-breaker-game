@@ -31,25 +31,45 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-P1_LEFT        |P1_LEFT_OUT    |    6.446|
-P1_RIGHT       |P1_RIGHT_OUT   |    5.435|
-P2_LEFT        |P2_LEFT_OUT    |    6.184|
-P2_RIGHT       |P2_RIGHT_OUT   |    6.697|
----------------+---------------+---------+
+Setup/Hold to clock CLOCK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+P1_LEFT     |    2.679(R)|      SLOW  |    0.179(R)|      SLOW  |CLOCK_BUFGP       |   0.000|
+P1_RIGHT    |    3.319(R)|      SLOW  |   -0.268(R)|      SLOW  |CLOCK_BUFGP       |   0.000|
+P2_LEFT     |    3.264(R)|      SLOW  |   -0.136(R)|      SLOW  |CLOCK_BUFGP       |   0.000|
+P2_RIGHT    |    3.253(R)|      SLOW  |   -0.327(R)|      SLOW  |CLOCK_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLOCK to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+P1_LEFT_OUT |         7.879(R)|      SLOW  |         4.097(R)|      FAST  |CLOCK_BUFGP       |   0.000|
+P1_RIGHT_OUT|         7.078(R)|      SLOW  |         3.602(R)|      FAST  |CLOCK_BUFGP       |   0.000|
+P2_LEFT_OUT |         7.266(R)|      SLOW  |         3.756(R)|      FAST  |CLOCK_BUFGP       |   0.000|
+P2_RIGHT_OUT|         7.522(R)|      SLOW  |         3.909(R)|      FAST  |CLOCK_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |    3.462|         |         |         |
+---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Dec 10 22:17:48 2022 
+Analysis completed Mon Dec 12 01:11:47 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 368 MB
+Peak Memory Usage: 371 MB
 
 
 

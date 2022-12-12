@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd" into library work
+Parsing VHDL file "/home/korn/xilinx/digital-project/secondary_board/MAIN.vhd" into library work
 Parsing entity <MAIN>.
 Parsing architecture <Behavioral> of entity <main>.
 
@@ -117,26 +117,50 @@ Parsing architecture <Behavioral> of entity <main>.
 =========================================================================
 
 Elaborating entity <MAIN> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd" Line 28: p1_left should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd" Line 29: p1_right should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd" Line 30: p2_left should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd" Line 31: p2_right should be on the sensitivity list of the process
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <MAIN>.
-    Related source file is "/home/korn/xilinx/digital-project-pong/secondary_board/MAIN.vhd".
-WARNING:Xst:647 - Input <CLOCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Related source file is "/home/korn/xilinx/digital-project/secondary_board/MAIN.vhd".
+    Found 31-bit register for signal <button_debounce_p1_right>.
+    Found 31-bit register for signal <button_debounce_p2_left>.
+    Found 31-bit register for signal <button_debounce_p2_right>.
+    Found 1-bit register for signal <P1_LEFT_OUT>.
+    Found 1-bit register for signal <P1_RIGHT_OUT>.
+    Found 1-bit register for signal <P2_LEFT_OUT>.
+    Found 1-bit register for signal <P2_RIGHT_OUT>.
+    Found 31-bit register for signal <button_debounce_p1_left>.
+    Found 31-bit subtractor for signal <GND_5_o_GND_5_o_sub_6_OUT<30:0>> created at line 47.
+    Found 31-bit subtractor for signal <GND_5_o_GND_5_o_sub_9_OUT<30:0>> created at line 53.
+    Found 31-bit subtractor for signal <GND_5_o_GND_5_o_sub_12_OUT<30:0>> created at line 59.
+    Found 31-bit subtractor for signal <GND_5_o_GND_5_o_sub_15_OUT<30:0>> created at line 65.
+    Found 31-bit comparator lessequal for signal <GND_5_o_button_debounce_p1_left[30]_LessThan_5_o> created at line 46
+    Found 31-bit comparator lessequal for signal <GND_5_o_button_debounce_p1_right[30]_LessThan_8_o> created at line 52
+    Found 31-bit comparator lessequal for signal <GND_5_o_button_debounce_p2_left[30]_LessThan_11_o> created at line 58
+    Found 31-bit comparator lessequal for signal <GND_5_o_button_debounce_p2_right[30]_LessThan_14_o> created at line 64
     Summary:
-	no macro.
+	inferred   4 Adder/Subtractor(s).
+	inferred 128 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   8 Multiplexer(s).
 Unit <MAIN> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 31-bit subtractor                                     : 4
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 31-bit register                                       : 4
+# Comparators                                          : 4
+ 31-bit comparator lessequal                           : 4
+# Multiplexers                                         : 8
+ 31-bit 2-to-1 multiplexer                             : 8
+
 =========================================================================
 
 =========================================================================
@@ -147,7 +171,16 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 31-bit subtractor                                     : 4
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Comparators                                          : 4
+ 31-bit comparator lessequal                           : 4
+# Multiplexers                                         : 8
+ 31-bit 2-to-1 multiplexer                             : 8
+
 =========================================================================
 
 =========================================================================
@@ -155,17 +188,88 @@ Found no macro
 =========================================================================
 
 Optimizing unit <MAIN> ...
+WARNING:Xst:1293 - FF/Latch <button_debounce_p1_right_30> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_29> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_28> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_27> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_26> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_25> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_24> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_23> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_22> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_21> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_20> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_16> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_15> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_right_14> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_30> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_29> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_28> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_27> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_26> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_25> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_24> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_23> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_22> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_21> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_20> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_16> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_15> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_left_14> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_30> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_29> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_28> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_27> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_26> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_25> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_24> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_23> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_22> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_21> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_20> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_16> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_15> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p1_left_14> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_30> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_29> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_28> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_27> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_26> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_25> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_24> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_23> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_22> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_21> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_20> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_16> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_15> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <button_debounce_p2_right_14> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MAIN, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block MAIN, actual ratio is 4.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 60
+ Flip-Flops                                            : 60
+
 =========================================================================
 
 =========================================================================
@@ -187,6 +291,20 @@ Top Level Output File Name         : MAIN.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 338
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 112
+#      LUT5                        : 4
+#      LUT6                        : 72
+#      MUXCY                       : 80
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 56
+# FlipFlops/Latches                : 60
+#      FD                          : 60
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 8
 #      IBUF                        : 4
 #      OBUF                        : 4
@@ -198,19 +316,23 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              60  out of  11440     0%  
+ Number of Slice LUTs:                  192  out of   5720     3%  
+    Number used as Logic:               192  out of   5720     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:    196
+   Number with an unused Flip Flop:     136  out of    196    69%  
+   Number with an unused LUT:             4  out of    196     2%  
+   Number of fully used LUT-FF pairs:    56  out of    196    28%  
+   Number of unique control sets:         1
 
 IO Utilization: 
  Number of IOs:                           9
- Number of bonded IOBs:                   8  out of    102     7%  
+ Number of bonded IOBs:                   9  out of    102     8%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -230,7 +352,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK                              | BUFGP                  | 60    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -240,50 +366,105 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 4.372ns
+   Minimum period: 3.176ns (Maximum Frequency: 314.896MHz)
+   Minimum input arrival time before clock: 4.636ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4 / 4
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 3.176ns (frequency: 314.896MHz)
+  Total number of paths / destination ports: 1308 / 60
 -------------------------------------------------------------------------
-Delay:               4.372ns (Levels of Logic = 2)
-  Source:            P1_LEFT (PAD)
-  Destination:       P1_LEFT_OUT (PAD)
+Delay:               3.176ns (Levels of Logic = 3)
+  Source:            button_debounce_p1_left_0 (FF)
+  Destination:       button_debounce_p1_left_0 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
 
-  Data Path: P1_LEFT to P1_LEFT_OUT
+  Data Path: button_debounce_p1_left_0 to button_debounce_p1_left_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  P1_LEFT_IBUF (P1_LEFT_OUT_OBUF)
+     FD:C->Q               4   0.447   1.028  button_debounce_p1_left_0 (button_debounce_p1_left_0)
+     LUT6:I1->O            1   0.203   0.000  _n0056<30>2_F (N12)
+     MUXF7:I0->O          14   0.131   1.062  _n0056<30>2 (_n0056<30>1)
+     LUT6:I4->O            1   0.203   0.000  Mmux_button_debounce_p1_left[30]_GND_5_o_mux_6_OUT11 (button_debounce_p1_left[30]_GND_5_o_mux_6_OUT<0>)
+     FD:D                      0.102          button_debounce_p1_left_0
+    ----------------------------------------
+    Total                      3.176ns (1.086ns logic, 2.090ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 752 / 60
+-------------------------------------------------------------------------
+Offset:              4.636ns (Levels of Logic = 4)
+  Source:            P1_LEFT (PAD)
+  Destination:       button_debounce_p1_left_0 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: P1_LEFT to button_debounce_p1_left_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.222   1.713  P1_LEFT_IBUF (P1_LEFT_IBUF)
+     LUT6:I0->O            1   0.203   0.000  _n0056<30>2_F (N12)
+     MUXF7:I0->O          14   0.131   1.062  _n0056<30>2 (_n0056<30>1)
+     LUT6:I4->O            1   0.203   0.000  Mmux_button_debounce_p1_left[30]_GND_5_o_mux_6_OUT11 (button_debounce_p1_left[30]_GND_5_o_mux_6_OUT<0>)
+     FD:D                      0.102          button_debounce_p1_left_0
+    ----------------------------------------
+    Total                      4.636ns (1.861ns logic, 2.775ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            P1_LEFT_OUT (FF)
+  Destination:       P1_LEFT_OUT (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: P1_LEFT_OUT to P1_LEFT_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  P1_LEFT_OUT (P1_LEFT_OUT_OBUF)
      OBUF:I->O                 2.571          P1_LEFT_OUT_OBUF (P1_LEFT_OUT)
     ----------------------------------------
-    Total                      4.372ns (3.793ns logic, 0.579ns route)
-                                       (86.8% logic, 13.2% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |    3.176|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.80 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.42 secs
  
 --> 
 
 
-Total memory usage is 365628 kilobytes
+Total memory usage is 374920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :   68 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

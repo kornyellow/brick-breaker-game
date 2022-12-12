@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/korn/xilinx/digital-project-pong/primary_board/MAIN.ncd
-OUTFILE=/home/korn/xilinx/digital-project-pong/primary_board/MAIN.bit
+INFILE=/home/korn/xilinx/digital-project/primary_board/MAIN.ncd
+OUTFILE=/home/korn/xilinx/digital-project/primary_board/MAIN.bit
 FAMILY=Spartan6
 PART=xc6slx9-3tqg144
-WORKINGDIR=/home/korn/xilinx/digital-project-pong/primary_board
+WORKINGDIR=/home/korn/xilinx/digital-project/primary_board
 LICENSE=WebPack
 USER_INFO=__0_0_0

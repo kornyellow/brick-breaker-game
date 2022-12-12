@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: MAIN.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" into library work
+Parsing VHDL file "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" into library work
 Parsing entity <MAIN>.
 Parsing architecture <Behavioral> of entity <main>.
 
@@ -117,393 +117,1184 @@ Parsing architecture <Behavioral> of entity <main>.
 =========================================================================
 
 Elaborating entity <MAIN> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:871 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 307: Using initial value ((1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1),(1)) for brick_array since it is never assigned
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 253: Net <player1_y[9]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 262: Net <player2_y[9]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 272: Net <ball_w[6]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 293: Net <particle_array[0]_w[6]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 328: Net <brick_w[6]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd" Line 337: Net <brick_draw_w[6]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 310: Net <player1_y[9]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 319: Net <player2_y[9]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 329: Net <ball_w[6]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 350: Net <particle_array[0]_w[6]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 386: Net <brick_w[6]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd" Line 395: Net <brick_draw_w[6]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <MAIN>.
-    Related source file is "/home/korn/xilinx/digital-project-pong/primary_board/MAIN.vhd".
+    Related source file is "/home/korn/xilinx/digital-project/primary_board/MAIN.vhd".
 WARNING:Xst:2935 - Signal 'player1_y', unconnected in block 'MAIN', is tied to its initial value (0110100100).
 WARNING:Xst:2935 - Signal 'player1_w', unconnected in block 'MAIN', is tied to its initial value (0110000).
 WARNING:Xst:2935 - Signal 'player1_h', unconnected in block 'MAIN', is tied to its initial value (0001000).
-WARNING:Xst:2935 - Signal 'player2_y', unconnected in block 'MAIN', is tied to its initial value (0101101000).
+WARNING:Xst:2935 - Signal 'player2_y', unconnected in block 'MAIN', is tied to its initial value (0111000010).
 WARNING:Xst:2935 - Signal 'player2_w', unconnected in block 'MAIN', is tied to its initial value (0110000).
 WARNING:Xst:2935 - Signal 'player2_h', unconnected in block 'MAIN', is tied to its initial value (0001000).
 WARNING:Xst:2935 - Signal 'ball_w', unconnected in block 'MAIN', is tied to its initial value (0001000).
 WARNING:Xst:2935 - Signal 'ball_h', unconnected in block 'MAIN', is tied to its initial value (0001000).
-WARNING:Xst:2935 - Signal 'particle_array[0]_w', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[0]_h', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[1]_w', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[1]_h', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[2]_w', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[2]_h', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[3]_w', unconnected in block 'MAIN', is tied to its initial value (0000110).
-WARNING:Xst:2935 - Signal 'particle_array[3]_h', unconnected in block 'MAIN', is tied to its initial value (0000110).
+WARNING:Xst:2935 - Signal 'particle_array[0]_w', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[0]_h', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[1]_w', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[1]_h', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[2]_w', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[2]_h', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[3]_w', unconnected in block 'MAIN', is tied to its initial value (0001100).
+WARNING:Xst:2935 - Signal 'particle_array[3]_h', unconnected in block 'MAIN', is tied to its initial value (0001100).
 WARNING:Xst:2935 - Signal 'brick_w', unconnected in block 'MAIN', is tied to its initial value (0011110).
 WARNING:Xst:2935 - Signal 'brick_h', unconnected in block 'MAIN', is tied to its initial value (0001010).
 WARNING:Xst:2935 - Signal 'brick_draw_w', unconnected in block 'MAIN', is tied to its initial value (0011110).
 WARNING:Xst:2935 - Signal 'brick_draw_h', unconnected in block 'MAIN', is tied to its initial value (0001010).
-WARNING:Xst:2935 - Signal 'particle_array[0]_e', unconnected in block 'MAIN', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'particle_array[1]_e', unconnected in block 'MAIN', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'particle_array[2]_e', unconnected in block 'MAIN', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'particle_array[3]_e', unconnected in block 'MAIN', is tied to its initial value (0).
+    Register <particle_array[3]_dy_dummy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dx_dummy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dx_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dx_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[3]_dx> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[2]_dy_dummy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[2]_dy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[2]_dy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[2]_dy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[2]_dx> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[1]_dy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[1]_dx_dummy_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[1]_dx_dummy_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[1]_dx_dummy> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[1]_dx> equivalent to <particle_array[0]_dx> has been removed
+    Register <particle_array[0]_dy> equivalent to <particle_array[0]_dx> has been removed
+    Found 31-bit register for signal <start_counter>.
+    Found 1-bit register for signal <is_game_start>.
+    Found 31-bit register for signal <score>.
     Found 10-bit register for signal <player1_x>.
+    Found 5-bit register for signal <player1_dx>.
     Found 10-bit register for signal <player2_x>.
+    Found 5-bit register for signal <player2_dx>.
     Found 10-bit register for signal <ball_x>.
     Found 10-bit register for signal <ball_y>.
     Found 5-bit register for signal <ball_dx>.
     Found 5-bit register for signal <ball_dy>.
+    Found 31-bit register for signal <buzzer_counter>.
+    Found 10-bit register for signal <particle_array[0]_x>.
+    Found 10-bit register for signal <particle_array[0]_y>.
+    Found 10-bit register for signal <particle_array[1]_x>.
+    Found 10-bit register for signal <particle_array[1]_y>.
+    Found 10-bit register for signal <particle_array[2]_x>.
+    Found 10-bit register for signal <particle_array[2]_y>.
+    Found 10-bit register for signal <particle_array[3]_x>.
+    Found 10-bit register for signal <particle_array[3]_y>.
+    Found 7-bit register for signal <particle_time>.
+    Found 1-bit register for signal <BUZZER>.
     Found 1-bit register for signal <RED>.
     Found 1-bit register for signal <GREEN>.
     Found 1-bit register for signal <BLUE>.
+    Found 2-bit register for signal <brick_array[0]_state>.
+    Found 2-bit register for signal <brick_array[1]_state>.
+    Found 2-bit register for signal <brick_array[2]_state>.
+    Found 2-bit register for signal <brick_array[3]_state>.
+    Found 2-bit register for signal <brick_array[4]_state>.
+    Found 2-bit register for signal <brick_array[5]_state>.
+    Found 2-bit register for signal <brick_array[6]_state>.
+    Found 2-bit register for signal <brick_array[7]_state>.
+    Found 2-bit register for signal <brick_array[8]_state>.
+    Found 2-bit register for signal <brick_array[9]_state>.
+    Found 2-bit register for signal <brick_array[10]_state>.
+    Found 2-bit register for signal <brick_array[11]_state>.
+    Found 2-bit register for signal <brick_array[12]_state>.
+    Found 2-bit register for signal <brick_array[13]_state>.
+    Found 2-bit register for signal <brick_array[14]_state>.
+    Found 2-bit register for signal <brick_array[15]_state>.
+    Found 2-bit register for signal <brick_array[16]_state>.
+    Found 2-bit register for signal <brick_array[17]_state>.
+    Found 2-bit register for signal <brick_array[18]_state>.
+    Found 2-bit register for signal <brick_array[19]_state>.
+    Found 2-bit register for signal <brick_array[20]_state>.
+    Found 2-bit register for signal <brick_array[21]_state>.
+    Found 2-bit register for signal <brick_array[22]_state>.
+    Found 2-bit register for signal <brick_array[23]_state>.
+    Found 2-bit register for signal <brick_array[24]_state>.
+    Found 2-bit register for signal <brick_array[25]_state>.
+    Found 2-bit register for signal <brick_array[26]_state>.
+    Found 2-bit register for signal <brick_array[27]_state>.
+    Found 2-bit register for signal <brick_array[28]_state>.
+    Found 2-bit register for signal <brick_array[29]_state>.
+    Found 2-bit register for signal <brick_array[30]_state>.
+    Found 2-bit register for signal <brick_array[31]_state>.
+    Found 2-bit register for signal <brick_array[32]_state>.
+    Found 2-bit register for signal <brick_array[33]_state>.
+    Found 2-bit register for signal <brick_array[34]_state>.
+    Found 2-bit register for signal <brick_array[35]_state>.
+    Found 2-bit register for signal <brick_array[36]_state>.
+    Found 2-bit register for signal <brick_array[37]_state>.
+    Found 2-bit register for signal <brick_array[38]_state>.
+    Found 2-bit register for signal <brick_array[39]_state>.
+    Found 2-bit register for signal <brick_array[40]_state>.
+    Found 2-bit register for signal <brick_array[41]_state>.
+    Found 2-bit register for signal <brick_array[42]_state>.
+    Found 2-bit register for signal <brick_array[43]_state>.
+    Found 2-bit register for signal <brick_array[44]_state>.
+    Found 2-bit register for signal <brick_array[45]_state>.
+    Found 2-bit register for signal <brick_array[46]_state>.
+    Found 2-bit register for signal <brick_array[47]_state>.
+    Found 2-bit register for signal <brick_array[48]_state>.
+    Found 2-bit register for signal <brick_array[49]_state>.
+    Found 2-bit register for signal <brick_array[50]_state>.
+    Found 2-bit register for signal <brick_array[51]_state>.
+    Found 2-bit register for signal <brick_array[52]_state>.
+    Found 2-bit register for signal <brick_array[53]_state>.
+    Found 2-bit register for signal <brick_array[54]_state>.
+    Found 2-bit register for signal <brick_array[55]_state>.
+    Found 2-bit register for signal <brick_array[56]_state>.
+    Found 2-bit register for signal <brick_array[57]_state>.
+    Found 2-bit register for signal <brick_array[58]_state>.
+    Found 2-bit register for signal <brick_array[59]_state>.
+    Found 2-bit register for signal <brick_array[60]_state>.
+    Found 2-bit register for signal <brick_array[61]_state>.
+    Found 2-bit register for signal <brick_array[62]_state>.
+    Found 2-bit register for signal <brick_array[63]_state>.
+    Found 2-bit register for signal <brick_array[64]_state>.
+    Found 2-bit register for signal <brick_array[65]_state>.
+    Found 2-bit register for signal <brick_array[66]_state>.
+    Found 2-bit register for signal <brick_array[67]_state>.
+    Found 2-bit register for signal <brick_array[68]_state>.
+    Found 2-bit register for signal <brick_array[69]_state>.
+    Found 2-bit register for signal <brick_array[70]_state>.
+    Found 2-bit register for signal <brick_array[71]_state>.
+    Found 2-bit register for signal <brick_array[72]_state>.
+    Found 2-bit register for signal <brick_array[73]_state>.
+    Found 2-bit register for signal <brick_array[74]_state>.
+    Found 2-bit register for signal <brick_array[75]_state>.
+    Found 2-bit register for signal <brick_array[76]_state>.
+    Found 2-bit register for signal <brick_array[77]_state>.
+    Found 2-bit register for signal <brick_array[78]_state>.
+    Found 2-bit register for signal <brick_array[79]_state>.
+    Found 2-bit register for signal <brick_array[80]_state>.
+    Found 2-bit register for signal <brick_array[81]_state>.
+    Found 2-bit register for signal <brick_array[82]_state>.
+    Found 2-bit register for signal <brick_array[83]_state>.
+    Found 2-bit register for signal <brick_array[84]_state>.
+    Found 2-bit register for signal <brick_array[85]_state>.
+    Found 2-bit register for signal <brick_array[86]_state>.
+    Found 2-bit register for signal <brick_array[87]_state>.
+    Found 2-bit register for signal <brick_array[88]_state>.
+    Found 2-bit register for signal <brick_array[89]_state>.
+    Found 2-bit register for signal <brick_array[90]_state>.
+    Found 2-bit register for signal <brick_array[91]_state>.
+    Found 2-bit register for signal <brick_array[92]_state>.
+    Found 2-bit register for signal <brick_array[93]_state>.
+    Found 2-bit register for signal <brick_array[94]_state>.
+    Found 2-bit register for signal <brick_array[95]_state>.
+    Found 2-bit register for signal <brick_array[96]_state>.
+    Found 2-bit register for signal <brick_array[97]_state>.
+    Found 2-bit register for signal <brick_array[98]_state>.
+    Found 2-bit register for signal <brick_array[99]_state>.
+    Found 2-bit register for signal <brick_array[100]_state>.
+    Found 2-bit register for signal <brick_array[101]_state>.
+    Found 2-bit register for signal <brick_array[102]_state>.
+    Found 2-bit register for signal <brick_array[103]_state>.
+    Found 2-bit register for signal <brick_array[104]_state>.
+    Found 2-bit register for signal <brick_array[105]_state>.
+    Found 2-bit register for signal <brick_array[106]_state>.
+    Found 2-bit register for signal <brick_array[107]_state>.
+    Found 2-bit register for signal <brick_array[108]_state>.
+    Found 2-bit register for signal <brick_array[109]_state>.
+    Found 2-bit register for signal <brick_array[110]_state>.
+    Found 2-bit register for signal <brick_array[111]_state>.
+    Found 2-bit register for signal <brick_array[112]_state>.
+    Found 2-bit register for signal <brick_array[113]_state>.
+    Found 2-bit register for signal <brick_array[114]_state>.
+    Found 2-bit register for signal <brick_array[115]_state>.
+    Found 2-bit register for signal <brick_array[116]_state>.
+    Found 2-bit register for signal <brick_array[117]_state>.
+    Found 2-bit register for signal <brick_array[118]_state>.
+    Found 2-bit register for signal <brick_array[119]_state>.
+    Found 2-bit register for signal <brick_array[120]_state>.
+    Found 2-bit register for signal <brick_array[121]_state>.
+    Found 2-bit register for signal <brick_array[122]_state>.
+    Found 2-bit register for signal <brick_array[123]_state>.
+    Found 2-bit register for signal <brick_array[124]_state>.
+    Found 2-bit register for signal <brick_array[125]_state>.
+    Found 2-bit register for signal <brick_array[126]_state>.
+    Found 2-bit register for signal <brick_array[127]_state>.
+    Found 2-bit register for signal <brick_array[128]_state>.
+    Found 2-bit register for signal <brick_array[129]_state>.
+    Found 2-bit register for signal <brick_array[130]_state>.
+    Found 2-bit register for signal <brick_array[131]_state>.
+    Found 2-bit register for signal <brick_array[132]_state>.
+    Found 2-bit register for signal <brick_array[133]_state>.
+    Found 2-bit register for signal <brick_array[134]_state>.
+    Found 2-bit register for signal <brick_array[135]_state>.
+    Found 2-bit register for signal <brick_array[136]_state>.
+    Found 2-bit register for signal <brick_array[137]_state>.
+    Found 2-bit register for signal <brick_array[138]_state>.
+    Found 2-bit register for signal <brick_array[139]_state>.
+    Found 2-bit register for signal <brick_array[140]_state>.
+    Found 2-bit register for signal <brick_array[141]_state>.
+    Found 2-bit register for signal <brick_array[142]_state>.
+    Found 2-bit register for signal <brick_array[143]_state>.
+    Found 2-bit register for signal <brick_array[144]_state>.
+    Found 2-bit register for signal <brick_array[145]_state>.
+    Found 2-bit register for signal <brick_array[146]_state>.
+    Found 2-bit register for signal <brick_array[147]_state>.
+    Found 2-bit register for signal <brick_array[148]_state>.
+    Found 2-bit register for signal <brick_array[149]_state>.
+    Found 2-bit register for signal <brick_array[150]_state>.
+    Found 2-bit register for signal <brick_array[151]_state>.
+    Found 2-bit register for signal <brick_array[152]_state>.
+    Found 2-bit register for signal <brick_array[153]_state>.
+    Found 2-bit register for signal <brick_array[154]_state>.
+    Found 2-bit register for signal <brick_array[155]_state>.
+    Found 2-bit register for signal <brick_array[156]_state>.
+    Found 2-bit register for signal <brick_array[157]_state>.
+    Found 2-bit register for signal <brick_array[158]_state>.
+    Found 2-bit register for signal <brick_array[159]_state>.
+    Found 2-bit register for signal <brick_array[160]_state>.
+    Found 2-bit register for signal <brick_array[161]_state>.
+    Found 2-bit register for signal <brick_array[162]_state>.
+    Found 2-bit register for signal <brick_array[163]_state>.
+    Found 2-bit register for signal <brick_array[164]_state>.
+    Found 2-bit register for signal <brick_array[165]_state>.
+    Found 2-bit register for signal <brick_array[166]_state>.
+    Found 2-bit register for signal <brick_array[167]_state>.
+    Found 2-bit register for signal <brick_array[168]_state>.
+    Found 2-bit register for signal <brick_array[169]_state>.
+    Found 2-bit register for signal <brick_array[170]_state>.
+    Found 2-bit register for signal <brick_array[171]_state>.
+    Found 2-bit register for signal <brick_array[172]_state>.
+    Found 2-bit register for signal <brick_array[173]_state>.
+    Found 2-bit register for signal <brick_array[174]_state>.
+    Found 2-bit register for signal <brick_array[175]_state>.
+    Found 2-bit register for signal <brick_array[176]_state>.
+    Found 2-bit register for signal <brick_array[177]_state>.
+    Found 2-bit register for signal <brick_array[178]_state>.
+    Found 2-bit register for signal <brick_array[179]_state>.
+    Found 2-bit register for signal <brick_array[180]_state>.
+    Found 2-bit register for signal <brick_array[181]_state>.
+    Found 2-bit register for signal <brick_array[182]_state>.
+    Found 2-bit register for signal <brick_array[183]_state>.
+    Found 2-bit register for signal <brick_array[184]_state>.
+    Found 2-bit register for signal <brick_array[185]_state>.
+    Found 2-bit register for signal <brick_array[186]_state>.
+    Found 2-bit register for signal <brick_array[187]_state>.
+    Found 2-bit register for signal <brick_array[188]_state>.
+    Found 2-bit register for signal <brick_array[189]_state>.
+    Found 2-bit register for signal <brick_array[190]_state>.
+    Found 2-bit register for signal <brick_array[191]_state>.
+    Found 2-bit register for signal <brick_array[192]_state>.
+    Found 3-bit register for signal <n6833[2:0]>.
+    Found 3-bit register for signal <n6834[2:0]>.
+    Found 8-bit register for signal <brick_i>.
     Found 1-bit register for signal <HSYNC>.
     Found 1-bit register for signal <VSYNC>.
     Found 10-bit register for signal <x>.
     Found 10-bit register for signal <y>.
     Found 20-bit register for signal <game_counter>.
-    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_3_OUT> created at line 358.
-    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_4_OUT> created at line 359.
-    Found 11-bit subtractor for signal <player1_x[9]_GND_5_o_sub_23_OUT> created at line 181.
-    Found 11-bit subtractor for signal <player2_x[9]_GND_5_o_sub_51_OUT> created at line 181.
-    Found 12-bit subtractor for signal <GND_5_o_GND_5_o_sub_168_OUT> created at line 244.
-    Found 12-bit subtractor for signal <GND_5_o_GND_5_o_sub_171_OUT> created at line 244.
-    Found 20-bit adder for signal <game_counter[19]_GND_5_o_add_0_OUT> created at line 353.
-    Found 11-bit adder for signal <n2226> created at line 166.
-    Found 11-bit adder for signal <n2228> created at line 167.
-    Found 11-bit adder for signal <n2230> created at line 181.
-    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_27_OUT> created at line 183.
-    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_35_OUT> created at line 188.
-    Found 11-bit adder for signal <n2238> created at line 166.
-    Found 11-bit adder for signal <n2240> created at line 167.
-    Found 11-bit adder for signal <n2242> created at line 181.
-    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_55_OUT> created at line 183.
-    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_63_OUT> created at line 188.
-    Found 10-bit adder for signal <player1_x[9]_GND_5_o_add_74_OUT> created at line 377.
-    Found 10-bit adder for signal <player2_x[9]_GND_5_o_add_80_OUT> created at line 381.
-    Found 10-bit adder for signal <ball_x[9]_ball_dx[4]_add_86_OUT> created at line 385.
-    Found 10-bit adder for signal <ball_y[9]_ball_dy[4]_add_87_OUT> created at line 386.
-    Found 11-bit adder for signal <n2286> created at line 241.
-    Found 11-bit adder for signal <BUS_0030_GND_5_o_add_164_OUT> created at line 241.
-    Found 11-bit adder for signal <n2291> created at line 242.
-    Found 11-bit adder for signal <BUS_0032_GND_5_o_add_166_OUT> created at line 242.
-    Found 25-bit adder for signal <n2297> created at line 244.
-    Found 10-bit adder for signal <player1_x[9]_GND_5_o_add_176_OUT> created at line 210.
-    Found 11-bit adder for signal <n1998> created at line 213.
-    Found 10-bit adder for signal <player2_x[9]_GND_5_o_add_187_OUT> created at line 210.
-    Found 11-bit adder for signal <n2004> created at line 213.
-    Found 11-bit adder for signal <n2027> created at line 210.
-    Found 12-bit adder for signal <n2032> created at line 213.
-    Found 11-bit adder for signal <n2041> created at line 210.
-    Found 12-bit adder for signal <n2046> created at line 213.
-    Found 11-bit adder for signal <n2048> created at line 210.
-    Found 12-bit adder for signal <n2053> created at line 213.
-    Found 11-bit adder for signal <n2055> created at line 210.
-    Found 12-bit adder for signal <n2060> created at line 213.
-    Found 11-bit adder for signal <n2069> created at line 210.
-    Found 12-bit adder for signal <n2074> created at line 213.
-    Found 11-bit adder for signal <n2076> created at line 210.
-    Found 12-bit adder for signal <n2081> created at line 213.
-    Found 11-bit adder for signal <n2083> created at line 210.
-    Found 12-bit adder for signal <n2088> created at line 213.
-    Found 11-bit adder for signal <n2090> created at line 210.
-    Found 12-bit adder for signal <n2095> created at line 213.
-    Found 11-bit adder for signal <n2097> created at line 210.
-    Found 12-bit adder for signal <n2102> created at line 213.
-    Found 11-bit adder for signal <n2104> created at line 210.
-    Found 12-bit adder for signal <n2109> created at line 213.
-    Found 11-bit adder for signal <n2111> created at line 210.
-    Found 12-bit adder for signal <n2116> created at line 213.
-    Found 10-bit adder for signal <GND_5_o_PWR_5_o_add_876_OUT> created at line 434.
-    Found 11-bit adder for signal <n2133> created at line 211.
-    Found 12-bit adder for signal <n2138> created at line 213.
-    Found 11-bit adder for signal <n1789> created at line 434.
-    Found 11-bit adder for signal <n2147> created at line 211.
-    Found 12-bit adder for signal <n2152> created at line 213.
-    Found 11-bit adder for signal <n1793> created at line 434.
-    Found 11-bit adder for signal <n2154> created at line 211.
-    Found 12-bit adder for signal <n2159> created at line 213.
-    Found 11-bit adder for signal <n1797> created at line 434.
-    Found 11-bit adder for signal <n2161> created at line 211.
-    Found 12-bit adder for signal <n2166> created at line 213.
-    Found 12-bit adder for signal <n1804> created at line 434.
-    Found 11-bit adder for signal <n2175> created at line 211.
-    Found 12-bit adder for signal <n2180> created at line 213.
-    Found 12-bit adder for signal <n1808> created at line 434.
-    Found 11-bit adder for signal <n2182> created at line 211.
-    Found 12-bit adder for signal <n2187> created at line 213.
-    Found 12-bit adder for signal <n1812> created at line 434.
-    Found 11-bit adder for signal <n2189> created at line 211.
-    Found 12-bit adder for signal <n2194> created at line 213.
-    Found 10-bit adder for signal <x[9]_GND_5_o_add_3142_OUT> created at line 472.
-    Found 10-bit adder for signal <y[9]_GND_5_o_add_3144_OUT> created at line 475.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_8_OUT<4:0>> created at line 363.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_27_OUT<4:0>> created at line 182.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_55_OUT<4:0>> created at line 182.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_35_OUT<4:0>> created at line 187.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_63_OUT<4:0>> created at line 187.
-    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_13_OUT<4:0>> created at line 366.
-    Found 12x12-bit multiplier for signal <GND_5_o_GND_5_o_MuLt_169_OUT> created at line 244.
-    Found 12x12-bit multiplier for signal <GND_5_o_GND_5_o_MuLt_172_OUT> created at line 244.
-    Found 6x6-bit multiplier for signal <ball_w[6]_ball_w[6]_MuLt_174_OUT> created at line 244.
-    Found 2x8-bit multiplier for signal <PWR_5_o_BUS_0060_MuLt_239_OUT> created at line 433.
-    Found 3x8-bit multiplier for signal <n1742> created at line 433.
-    Found 3x8-bit multiplier for signal <n1745> created at line 433.
-    Found 3x8-bit multiplier for signal <n1748> created at line 433.
-    Found 4x8-bit multiplier for signal <n1753> created at line 433.
-    Found 4x8-bit multiplier for signal <n1756> created at line 433.
-    Found 4x8-bit multiplier for signal <n1759> created at line 433.
-    Found 4x8-bit multiplier for signal <n1762> created at line 433.
-    Found 4x8-bit multiplier for signal <n1765> created at line 433.
-    Found 4x8-bit multiplier for signal <n1768> created at line 433.
-    Found 4x8-bit multiplier for signal <n1771> created at line 433.
-    Found 2x8-bit multiplier for signal <n2360> created at line 434.
-    Found 3x8-bit multiplier for signal <n2372> created at line 434.
-    Found 3x8-bit multiplier for signal <n2378> created at line 434.
-    Found 3x8-bit multiplier for signal <n2384> created at line 434.
-    Found 4x8-bit multiplier for signal <n2396> created at line 434.
-    Found 4x8-bit multiplier for signal <n2402> created at line 434.
-    Found 4x8-bit multiplier for signal <n2408> created at line 434.
-    Found 11-bit comparator greater for signal <ball_x[9]_BUS_0002_LessThan_16_o> created at line 166
-    Found 11-bit comparator greater for signal <player1_x[9]_BUS_0003_LessThan_18_o> created at line 166
-    Found 11-bit comparator greater for signal <ball_y[9]_BUS_0004_LessThan_20_o> created at line 167
-    Found 11-bit comparator greater for signal <player1_y[9]_BUS_0005_LessThan_22_o> created at line 167
-    Found 11-bit comparator lessequal for signal <n0031> created at line 181
-    Found 11-bit comparator lessequal for signal <n0035> created at line 181
-    Found 11-bit comparator lessequal for signal <n0043> created at line 186
-    Found 11-bit comparator lessequal for signal <n0045> created at line 186
-    Found 11-bit comparator greater for signal <ball_x[9]_BUS_0010_LessThan_44_o> created at line 166
-    Found 11-bit comparator greater for signal <player2_x[9]_BUS_0011_LessThan_46_o> created at line 166
-    Found 11-bit comparator greater for signal <ball_y[9]_BUS_0012_LessThan_48_o> created at line 167
-    Found 11-bit comparator greater for signal <player2_y[9]_BUS_0013_LessThan_50_o> created at line 167
-    Found 11-bit comparator lessequal for signal <n0074> created at line 181
-    Found 11-bit comparator lessequal for signal <n0078> created at line 181
-    Found 11-bit comparator lessequal for signal <n0087> created at line 186
-    Found 11-bit comparator lessequal for signal <n0089> created at line 186
-    Found 10-bit comparator lessequal for signal <n0109> created at line 141
-    Found 10-bit comparator lessequal for signal <n0111> created at line 144
-    Found 10-bit comparator lessequal for signal <n0118> created at line 141
-    Found 10-bit comparator lessequal for signal <n0120> created at line 144
-    Found 10-bit comparator lessequal for signal <n0127> created at line 141
-    Found 10-bit comparator lessequal for signal <n0129> created at line 144
-    Found 10-bit comparator lessequal for signal <n0134> created at line 141
-    Found 10-bit comparator lessequal for signal <n0136> created at line 144
-    Found 25-bit comparator lessequal for signal <n0245> created at line 244
-    Found 10-bit comparator lessequal for signal <n0249> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0037_LessThan_181_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0253> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0038_LessThan_184_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0265> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0041_LessThan_192_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0269> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0042_LessThan_195_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0282> created at line 213
-    Found 10-bit comparator greater for signal <x[9]_BUS_0048_LessThan_208_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0286> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0049_LessThan_211_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0298> created at line 213
-    Found 10-bit comparator greater for signal <x[9]_BUS_0053_LessThan_220_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0309> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0058_LessThan_232_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0321> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0063_LessThan_245_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0332> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0068_LessThan_257_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0344> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0073_LessThan_270_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0356> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0078_LessThan_283_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0368> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0083_LessThan_296_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0379> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0088_LessThan_308_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0391> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0093_LessThan_321_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0403> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0098_LessThan_334_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0415> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0103_LessThan_347_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0427> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0108_LessThan_360_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0439> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0113_LessThan_373_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0451> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0118_LessThan_386_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0463> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0123_LessThan_399_o> created at line 213
-    Found 10-bit comparator lessequal for signal <n0476> created at line 213
-    Found 11-bit comparator greater for signal <GND_5_o_BUS_0130_LessThan_415_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0562> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0241_LessThan_649_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0649> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0352_LessThan_884_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0739> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0463_LessThan_1133_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0826> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0574_LessThan_1368_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n0913> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0685_LessThan_1618_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n1000> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0796_LessThan_1868_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n1086> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_0907_LessThan_2117_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n1173> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_1018_LessThan_2352_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n1260> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_1129_LessThan_2602_o> created at line 213
-    Found 11-bit comparator lessequal for signal <n1347> created at line 213
-    Found 12-bit comparator greater for signal <GND_5_o_BUS_1240_LessThan_2852_o> created at line 213
-    Found 10-bit comparator greater for signal <GND_5_o_x[9]_LessThan_3139_o> created at line 460
-    Found 10-bit comparator lessequal for signal <n1511> created at line 460
-    Found 10-bit comparator greater for signal <GND_5_o_y[9]_LessThan_3141_o> created at line 466
-    Found 10-bit comparator lessequal for signal <n1516> created at line 466
-    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dx<1:4>> (without init value) have a constant value of 0 in block <MAIN>.
-    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dy<1:4>> (without init value) have a constant value of 0 in block <MAIN>.
-    WARNING:Xst:2404 -  FFs/Latches <particle_array[1]_dy<1:4>> (without init value) have a constant value of 0 in block <MAIN>.
-    WARNING:Xst:2404 -  FFs/Latches <particle_array[2]_dx<1:4>> (without init value) have a constant value of 0 in block <MAIN>.
+    Found 1-bit register for signal <particle_array[0]_dx>.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_7_OUT> created at line 436.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_8_OUT> created at line 437.
+    Found 11-bit subtractor for signal <player1_x[9]_GND_5_o_sub_35_OUT> created at line 190.
+    Found 11-bit subtractor for signal <player2_x[9]_GND_5_o_sub_63_OUT> created at line 190.
+    Found 12-bit subtractor for signal <GND_5_o_GND_5_o_sub_159_OUT> created at line 301.
+    Found 12-bit subtractor for signal <GND_5_o_GND_5_o_sub_162_OUT> created at line 301.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_242_OUT> created at line 190.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_250_OUT> created at line 195.
+    Found 20-bit adder for signal <game_counter[19]_GND_5_o_add_0_OUT> created at line 419.
+    Found 31-bit adder for signal <start_counter[30]_GND_5_o_add_2_OUT> created at line 424.
+    Found 11-bit adder for signal <n7179> created at line 175.
+    Found 11-bit adder for signal <n7181> created at line 176.
+    Found 11-bit adder for signal <n7183> created at line 190.
+    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_39_OUT> created at line 192.
+    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_47_OUT> created at line 197.
+    Found 11-bit adder for signal <n7191> created at line 175.
+    Found 11-bit adder for signal <n7193> created at line 176.
+    Found 11-bit adder for signal <n7195> created at line 190.
+    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_67_OUT> created at line 192.
+    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_75_OUT> created at line 197.
+    Found 10-bit adder for signal <player1_x[9]_player1_dx[4]_add_87_OUT> created at line 470.
+    Found 10-bit adder for signal <player2_x[9]_player2_dx[4]_add_93_OUT> created at line 474.
+    Found 10-bit adder for signal <ball_x[9]_ball_dx[4]_add_99_OUT> created at line 479.
+    Found 10-bit adder for signal <ball_y[9]_ball_dy[4]_add_100_OUT> created at line 480.
+    Found 10-bit adder for signal <particle_array[0]_x[9]_particle_array[0]_dx[4]_add_113_OUT> created at line 487.
+    Found 10-bit adder for signal <particle_array[0]_y[9]_particle_array[0]_dy[4]_add_114_OUT> created at line 488.
+    Found 10-bit adder for signal <particle_array[1]_x[9]_particle_array[1]_dx[4]_add_115_OUT> created at line 487.
+    Found 10-bit adder for signal <particle_array[1]_y[9]_particle_array[1]_dy[4]_add_116_OUT> created at line 488.
+    Found 10-bit adder for signal <particle_array[2]_x[9]_particle_array[2]_dx[4]_add_117_OUT> created at line 487.
+    Found 10-bit adder for signal <particle_array[2]_y[9]_particle_array[2]_dy[4]_add_118_OUT> created at line 488.
+    Found 10-bit adder for signal <particle_array[3]_x[9]_particle_array[3]_dx[4]_add_119_OUT> created at line 487.
+    Found 10-bit adder for signal <particle_array[3]_y[9]_particle_array[3]_dy[4]_add_120_OUT> created at line 488.
+    Found 12-bit adder for signal <n6052> created at line 509.
+    Found 11-bit adder for signal <n7241> created at line 298.
+    Found 11-bit adder for signal <BUS_0034_GND_5_o_add_155_OUT> created at line 298.
+    Found 11-bit adder for signal <n7246> created at line 299.
+    Found 11-bit adder for signal <BUS_0036_GND_5_o_add_157_OUT> created at line 299.
+    Found 25-bit adder for signal <n7252> created at line 301.
+    Found 10-bit adder for signal <player1_x[9]_GND_5_o_add_200_OUT> created at line 220.
+    Found 11-bit adder for signal <n6952> created at line 223.
+    Found 10-bit adder for signal <player2_x[9]_GND_5_o_add_221_OUT> created at line 220.
+    Found 11-bit adder for signal <n6958> created at line 223.
+    Found 11-bit adder for signal <n7270> created at line 175.
+    Found 11-bit adder for signal <n7272> created at line 176.
+    Found 11-bit adder for signal <n7274> created at line 190.
+    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_246_OUT> created at line 192.
+    Found 11-bit adder for signal <n7279[10:0]> created at line 195.
+    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_254_OUT> created at line 197.
+    Found 31-bit adder for signal <score[30]_GND_5_o_add_459_OUT> created at line 539.
+    Found 10-bit adder for signal <ball_x[9]_GND_5_o_add_460_OUT> created at line 542.
+    Found 10-bit adder for signal <ball_y[9]_GND_5_o_add_461_OUT> created at line 543.
+    Found 11-bit adder for signal <n7011> created at line 223.
+    Found 11-bit adder for signal <n7020> created at line 223.
+    Found 11-bit adder for signal <n7025> created at line 223.
+    Found 11-bit adder for signal <n7030> created at line 223.
+    Found 11-bit adder for signal <n7039> created at line 223.
+    Found 11-bit adder for signal <n7044> created at line 223.
+    Found 11-bit adder for signal <n7049> created at line 223.
+    Found 11-bit adder for signal <n7054> created at line 223.
+    Found 11-bit adder for signal <n7059> created at line 223.
+    Found 11-bit adder for signal <n7064> created at line 223.
+    Found 11-bit adder for signal <n7069> created at line 223.
+    Found 10-bit adder for signal <GND_5_o_PWR_5_o_add_2159_OUT> created at line 551.
+    Found 11-bit adder for signal <n7086> created at line 221.
+    Found 12-bit adder for signal <n7091> created at line 223.
+    Found 11-bit adder for signal <n6777> created at line 551.
+    Found 11-bit adder for signal <n7100> created at line 221.
+    Found 12-bit adder for signal <n7105> created at line 223.
+    Found 11-bit adder for signal <n6781> created at line 551.
+    Found 11-bit adder for signal <n7107> created at line 221.
+    Found 12-bit adder for signal <n7112> created at line 223.
+    Found 11-bit adder for signal <n6785> created at line 551.
+    Found 11-bit adder for signal <n7114> created at line 221.
+    Found 12-bit adder for signal <n7119> created at line 223.
+    Found 12-bit adder for signal <n6792> created at line 551.
+    Found 11-bit adder for signal <n7128> created at line 221.
+    Found 12-bit adder for signal <n7133> created at line 223.
+    Found 12-bit adder for signal <n6796> created at line 551.
+    Found 11-bit adder for signal <n7135> created at line 221.
+    Found 12-bit adder for signal <n7140> created at line 223.
+    Found 12-bit adder for signal <n6803> created at line 551.
+    Found 11-bit adder for signal <n7142> created at line 221.
+    Found 12-bit adder for signal <n7147> created at line 223.
+    Found 10-bit adder for signal <particle_array[0]_x[9]_GND_5_o_add_6229_OUT> created at line 220.
+    Found 10-bit adder for signal <particle_array[0]_y[9]_GND_5_o_add_6230_OUT> created at line 221.
+    Found 11-bit adder for signal <n7150> created at line 223.
+    Found 11-bit adder for signal <n7153> created at line 223.
+    Found 10-bit adder for signal <particle_array[1]_x[9]_GND_5_o_add_6240_OUT> created at line 220.
+    Found 10-bit adder for signal <particle_array[1]_y[9]_GND_5_o_add_6241_OUT> created at line 221.
+    Found 11-bit adder for signal <n7156> created at line 223.
+    Found 11-bit adder for signal <n7159> created at line 223.
+    Found 10-bit adder for signal <particle_array[2]_x[9]_GND_5_o_add_6251_OUT> created at line 220.
+    Found 10-bit adder for signal <particle_array[2]_y[9]_GND_5_o_add_6252_OUT> created at line 221.
+    Found 11-bit adder for signal <n7162> created at line 223.
+    Found 11-bit adder for signal <n7165> created at line 223.
+    Found 10-bit adder for signal <particle_array[3]_x[9]_GND_5_o_add_6262_OUT> created at line 220.
+    Found 10-bit adder for signal <particle_array[3]_y[9]_GND_5_o_add_6263_OUT> created at line 221.
+    Found 11-bit adder for signal <n7168> created at line 223.
+    Found 11-bit adder for signal <n7171> created at line 223.
+    Found 8-bit adder for signal <brick_i[7]_GND_5_o_add_6272_OUT> created at line 575.
+    Found 10-bit adder for signal <x[9]_GND_5_o_add_6899_OUT> created at line 606.
+    Found 10-bit adder for signal <y[9]_GND_5_o_add_6901_OUT> created at line 609.
+    Found 7-bit subtractor for signal <GND_5_o_GND_5_o_sub_123_OUT<6:0>> created at line 491.
+    Found 31-bit subtractor for signal <GND_5_o_GND_5_o_sub_147_OUT<30:0>> created at line 498.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_151_OUT<9:0>> created at line 508.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_263_OUT<1:0>> created at line 536.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_958_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1007_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1032_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1057_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1106_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1131_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1156_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1181_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1206_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1231_OUT> created at line 220.
+    Found 10-bit adder for signal <GND_5_o_GND_5_o_add_1256_OUT> created at line 220.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_18_OUT<4:0>> created at line 446.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_47_OUT<4:0>> created at line 196.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_67_OUT<4:0>> created at line 191.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_75_OUT<4:0>> created at line 196.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_39_OUT<4:0>> created at line 191.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dy[4]_sub_254_OUT<4:0>> created at line 196.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_14_OUT<4:0>> created at line 442.
+    Found 5-bit subtractor for signal <GND_5_o_ball_dx[4]_sub_246_OUT<4:0>> created at line 191.
+    Found 4x8-bit multiplier for signal <brick_i[3]_BUS_0031_MuLt_149_OUT> created at line 508.
+    Found 4x8-bit multiplier for signal <n7238> created at line 509.
+    Found 12x12-bit multiplier for signal <GND_5_o_GND_5_o_MuLt_160_OUT> created at line 301.
+    Found 12x12-bit multiplier for signal <GND_5_o_GND_5_o_MuLt_163_OUT> created at line 301.
+    Found 6x6-bit multiplier for signal <ball_w[6]_ball_w[6]_MuLt_165_OUT> created at line 301.
+    Found 2x8-bit multiplier for signal <PWR_5_o_BUS_0102_MuLt_954_OUT> created at line 550.
+    Found 3x8-bit multiplier for signal <PWR_5_o_BUS_0118_MuLt_1003_OUT> created at line 550.
+    Found 3x8-bit multiplier for signal <PWR_5_o_BUS_0126_MuLt_1028_OUT> created at line 550.
+    Found 3x8-bit multiplier for signal <PWR_5_o_BUS_0134_MuLt_1053_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0150_MuLt_1102_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0158_MuLt_1127_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0166_MuLt_1152_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0174_MuLt_1177_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0182_MuLt_1202_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0190_MuLt_1227_OUT> created at line 550.
+    Found 4x8-bit multiplier for signal <PWR_5_o_BUS_0198_MuLt_1252_OUT> created at line 550.
+    Found 2x8-bit multiplier for signal <n7351> created at line 551.
+    Found 3x8-bit multiplier for signal <n7363> created at line 551.
+    Found 3x8-bit multiplier for signal <n7369> created at line 551.
+    Found 3x8-bit multiplier for signal <n7375> created at line 551.
+    Found 4x8-bit multiplier for signal <n7387> created at line 551.
+    Found 4x8-bit multiplier for signal <n7393> created at line 551.
+    Found 4x8-bit multiplier for signal <n7399> created at line 551.
+    Found 16x6-bit Read Only RAM for signal <_n8277>
+    Found 2-bit 193-to-1 multiplexer for signal <brick_i[7]_X_5_o_wide_mux_261_OUT> created at line 536.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8193> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8196> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8199> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8202> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8205> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8208> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8211> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8214> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <_n8217> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <GND_5_o_GND_5_o_MUX_6842_o> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <GND_5_o_GND_5_o_MUX_6852_o> created at line 256.
+    Found 1-bit 12-to-1 multiplexer for signal <GND_5_o_GND_5_o_MUX_6862_o> created at line 256.
+    Found 31-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_5_o> created at line 429
+    Found 11-bit comparator greater for signal <ball_x[9]_BUS_0003_LessThan_28_o> created at line 175
+    Found 11-bit comparator greater for signal <player1_x[9]_BUS_0004_LessThan_30_o> created at line 175
+    Found 11-bit comparator greater for signal <ball_y[9]_BUS_0005_LessThan_32_o> created at line 176
+    Found 11-bit comparator greater for signal <player1_y[9]_BUS_0006_LessThan_34_o> created at line 176
+    Found 11-bit comparator lessequal for signal <n0051> created at line 190
+    Found 11-bit comparator lessequal for signal <n0055> created at line 190
+    Found 11-bit comparator lessequal for signal <n0063> created at line 195
+    Found 11-bit comparator lessequal for signal <n0065> created at line 195
+    Found 11-bit comparator greater for signal <ball_x[9]_BUS_0011_LessThan_56_o> created at line 175
+    Found 11-bit comparator greater for signal <player2_x[9]_BUS_0012_LessThan_58_o> created at line 175
+    Found 11-bit comparator greater for signal <ball_y[9]_BUS_0013_LessThan_60_o> created at line 176
+    Found 11-bit comparator greater for signal <player2_y[9]_BUS_0014_LessThan_62_o> created at line 176
+    Found 11-bit comparator lessequal for signal <n0094> created at line 190
+    Found 11-bit comparator lessequal for signal <n0098> created at line 190
+    Found 11-bit comparator lessequal for signal <n0107> created at line 195
+    Found 11-bit comparator lessequal for signal <n0109> created at line 195
+    Found 10-bit comparator lessequal for signal <n0130> created at line 150
+    Found 10-bit comparator lessequal for signal <n0132> created at line 153
+    Found 10-bit comparator lessequal for signal <n0139> created at line 150
+    Found 10-bit comparator lessequal for signal <n0141> created at line 153
+    Found 10-bit comparator lessequal for signal <n0150> created at line 150
+    Found 10-bit comparator lessequal for signal <n0152> created at line 153
+    Found 10-bit comparator lessequal for signal <n0157> created at line 150
+    Found 10-bit comparator lessequal for signal <n0159> created at line 153
+    Found 31-bit comparator greater for signal <GND_5_o_buzzer_counter[30]_LessThan_146_o> created at line 497
+    Found 25-bit comparator lessequal for signal <n0221> created at line 301
+    Found 10-bit comparator lessequal for signal <n0231> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0053_LessThan_205_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0235> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0054_LessThan_208_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0258> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0061_LessThan_226_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0262> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0062_LessThan_229_o> created at line 223
+    Found 11-bit comparator greater for signal <ball_x[9]_BUS_0063_LessThan_235_o> created at line 175
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0064_LessThan_237_o> created at line 175
+    Found 12-bit comparator greater for signal <ball_y[9]_GND_5_o_LessThan_239_o> created at line 176
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0066_LessThan_241_o> created at line 176
+    Found 11-bit comparator lessequal for signal <n0295> created at line 190
+    Found 11-bit comparator lessequal for signal <n0299> created at line 190
+    Found 11-bit comparator lessequal for signal <n0307> created at line 195
+    Found 12-bit comparator lessequal for signal <n0310> created at line 195
+    Found 10-bit comparator lessequal for signal <n0942> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0082_LessThan_890_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0946> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0083_LessThan_893_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0972> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_BUS_0089_LessThan_913_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n0998> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0097_LessThan_937_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1025> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0105_LessThan_962_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1051> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0113_LessThan_986_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1078> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0121_LessThan_1011_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1105> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0129_LessThan_1036_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1132> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0137_LessThan_1061_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1158> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0145_LessThan_1085_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1185> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0153_LessThan_1110_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1212> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0161_LessThan_1135_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1239> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0169_LessThan_1160_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1266> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0177_LessThan_1185_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1293> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0185_LessThan_1210_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1320> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0193_LessThan_1235_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1347> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0201_LessThan_1260_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n1373> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_0211_LessThan_1287_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n1683> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_0385_LessThan_1727_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n1994> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_0559_LessThan_2168_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n2307> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_0733_LessThan_2623_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n2618> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_0907_LessThan_3064_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n2929> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1081_LessThan_3520_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n3240> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1255_LessThan_3976_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n3550> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1429_LessThan_4431_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n3861> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1603_LessThan_4872_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n4172> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1777_LessThan_5328_o> created at line 223
+    Found 11-bit comparator lessequal for signal <n4483> created at line 223
+    Found 12-bit comparator greater for signal <GND_5_o_BUS_1951_LessThan_5784_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4793> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2122_LessThan_6234_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4797> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2123_LessThan_6237_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4818> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2126_LessThan_6245_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4822> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2127_LessThan_6248_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4840> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2130_LessThan_6256_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4844> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2131_LessThan_6259_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4862> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2134_LessThan_6267_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4866> created at line 223
+    Found 11-bit comparator greater for signal <GND_5_o_BUS_2135_LessThan_6270_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4885> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6277_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4888> created at line 223
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_6279_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4897> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6284_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4900> created at line 223
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_6286_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4909> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6291_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4918> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6298_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4927> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6305_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4936> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6312_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n4945> created at line 223
+    Found 10-bit comparator greater for signal <n4960> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6343_o> created at line 223
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_6451_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n5036> created at line 223
+    Found 10-bit comparator lessequal for signal <n5074> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6465_o> created at line 223
+    Found 10-bit comparator greater for signal <n5089> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6488_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n5200> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6610_o> created at line 223
+    Found 10-bit comparator greater for signal <n5215> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6633_o> created at line 223
+    Found 10-bit comparator lessequal for signal <n5326> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6754_o> created at line 223
+    Found 10-bit comparator greater for signal <n5341> created at line 223
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_6777_o> created at line 223
+    Found 10-bit comparator greater for signal <GND_5_o_x[9]_LessThan_6896_o> created at line 594
+    Found 10-bit comparator lessequal for signal <n5453> created at line 594
+    Found 10-bit comparator greater for signal <GND_5_o_y[9]_LessThan_6898_o> created at line 600
+    Found 10-bit comparator lessequal for signal <n5458> created at line 600
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dx<1:3>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dx<4:4>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dy<1:3>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[0]_dy<4:4>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[1]_dx<1:1>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[1]_dy<1:3>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[1]_dy<4:4>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[2]_dx<1:3>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[2]_dx<4:4>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[2]_dy<1:1>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[3]_dx<1:1>> (without init value) have a constant value of 0 in block <MAIN>.
+    WARNING:Xst:2404 -  FFs/Latches <particle_array[3]_dy<1:1>> (without init value) have a constant value of 0 in block <MAIN>.
     Summary:
-	inferred  21 Multiplier(s).
-	inferred  81 Adder/Subtractor(s).
-	inferred  95 D-type flip-flop(s).
-	inferred  93 Comparator(s).
-	inferred 611 Multiplexer(s).
+	inferred   1 RAM(s).
+	inferred  23 Multiplier(s).
+	inferred 125 Adder/Subtractor(s).
+	inferred 688 D-type flip-flop(s).
+	inferred 152 Comparator(s).
+	inferred 3851 Multiplexer(s).
 Unit <MAIN> synthesized.
+
+Synthesizing Unit <div_31u_10u>.
+    Related source file is "".
+    Found 41-bit adder for signal <GND_11_o_b[9]_add_1_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_11_o_b[9]_add_3_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_11_o_b[9]_add_5_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_11_o_b[9]_add_7_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_11_o_b[9]_add_9_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_11_o_b[9]_add_11_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_11_o_b[9]_add_13_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_11_o_b[9]_add_15_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_11_o_b[9]_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_11_o_b[9]_add_19_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_b[9]_add_21_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_23_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_25_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_27_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_29_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_31_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_33_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_35_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_37_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_39_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_41_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_43_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_45_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_47_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_49_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_51_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_53_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_55_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_57_OUT[30:0]> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_59_OUT[30:0]> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_11_o_add_61_OUT[30:0]> created at line 0.
+    Found 41-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Summary:
+	inferred  31 Adder/Subtractor(s).
+	inferred  32 Comparator(s).
+	inferred 871 Multiplexer(s).
+Unit <div_31u_10u> synthesized.
+
+Synthesizing Unit <mod_31u_10u>.
+    Related source file is "".
+    Found 41-bit adder for signal <GND_12_o_b[9]_add_1_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_12_o_b[9]_add_3_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_12_o_b[9]_add_5_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_12_o_b[9]_add_7_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_12_o_b[9]_add_9_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_12_o_b[9]_add_11_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_12_o_b[9]_add_13_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_12_o_b[9]_add_15_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_12_o_b[9]_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_12_o_b[9]_add_19_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_b[9]_add_21_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_23_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_25_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_27_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_29_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_31_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_33_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_35_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_37_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_39_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_41_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_43_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_45_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_47_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_49_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_51_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_53_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_55_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_57_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_59_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_61_OUT> created at line 0.
+    Found 31-bit adder for signal <a[30]_GND_12_o_add_63_OUT> created at line 0.
+    Found 41-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  32 Comparator(s).
+	inferred 962 Multiplexer(s).
+Unit <mod_31u_10u> synthesized.
+
+Synthesizing Unit <div_10u_7u>.
+    Related source file is "".
+    Found 17-bit adder for signal <GND_13_o_b[6]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_13_o_b[6]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_13_o_b[6]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_13_o_b[6]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_13_o_b[6]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_13_o_b[6]_add_11_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_13_o_b[6]_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[6]_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_13_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_13_o_add_19_OUT[9:0]> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_7u> synthesized.
+
+Synthesizing Unit <mod_10u_7u>.
+    Related source file is "".
+    Found 17-bit adder for signal <GND_14_o_b[6]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_14_o_b[6]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_14_o_b[6]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_14_o_b[6]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_14_o_b[6]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_14_o_b[6]_add_11_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_14_o_b[6]_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[6]_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_14_o_add_17_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_14_o_add_19_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_14_o_add_21_OUT> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  11 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred 101 Multiplexer(s).
+Unit <mod_10u_7u> synthesized.
+
+Synthesizing Unit <div_7u_4u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_15_o_b[3]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_15_o_b[3]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_15_o_b[3]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_15_o_b[3]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[3]_add_9_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_11_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_13_OUT[6:0]> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  31 Multiplexer(s).
+Unit <div_7u_4u> synthesized.
+
+Synthesizing Unit <mod_7u_4u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_16_o_b[3]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_16_o_b[3]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_16_o_b[3]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_16_o_b[3]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[3]_add_9_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_16_o_add_11_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_16_o_add_13_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_16_o_add_15_OUT> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  50 Multiplexer(s).
+Unit <mod_7u_4u> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 21
+# RAMs                                                 : 1
+ 16x6-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 23
  12x12-bit multiplier                                  : 2
  6x6-bit multiplier                                    : 1
  8x2-bit multiplier                                    : 2
  8x3-bit multiplier                                    : 6
- 8x4-bit multiplier                                    : 10
-# Adders/Subtractors                                   : 81
- 10-bit adder                                          : 13
- 11-bit adder                                          : 33
- 11-bit subtractor                                     : 2
- 12-bit adder                                          : 21
+ 8x4-bit multiplier                                    : 12
+# Adders/Subtractors                                   : 224
+ 10-bit adder                                          : 53
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 49
+ 11-bit subtractor                                     : 4
+ 12-bit adder                                          : 13
  12-bit subtractor                                     : 2
- 2-bit subtractor                                      : 2
+ 13-bit adder                                          : 2
+ 14-bit adder                                          : 2
+ 15-bit adder                                          : 2
+ 16-bit adder                                          : 2
+ 17-bit adder                                          : 2
+ 2-bit subtractor                                      : 3
  20-bit adder                                          : 1
  25-bit adder                                          : 1
- 5-bit subtractor                                      : 6
-# Registers                                            : 14
- 1-bit register                                        : 5
- 10-bit register                                       : 6
+ 31-bit adder                                          : 45
+ 31-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 2
+ 38-bit adder                                          : 2
+ 39-bit adder                                          : 2
+ 40-bit adder                                          : 2
+ 41-bit adder                                          : 2
+ 5-bit subtractor                                      : 8
+ 7-bit adder                                           : 7
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 2
+# Registers                                            : 227
+ 1-bit register                                        : 8
+ 10-bit register                                       : 14
+ 2-bit register                                        : 193
  20-bit register                                       : 1
- 5-bit register                                        : 2
-# Comparators                                          : 93
- 10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 19
- 11-bit comparator greater                             : 15
- 11-bit comparator lessequal                           : 31
- 12-bit comparator greater                             : 23
+ 3-bit register                                        : 2
+ 31-bit register                                       : 3
+ 5-bit register                                        : 4
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 254
+ 10-bit comparator greater                             : 23
+ 10-bit comparator lessequal                           : 63
+ 11-bit comparator greater                             : 40
+ 11-bit comparator lessequal                           : 25
+ 12-bit comparator greater                             : 11
+ 12-bit comparator lessequal                           : 3
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
  25-bit comparator lessequal                           : 1
-# Multiplexers                                         : 611
- 1-bit 2-to-1 multiplexer                              : 579
- 10-bit 2-to-1 multiplexer                             : 18
- 5-bit 2-to-1 multiplexer                              : 14
-# Xors                                                 : 10
- 1-bit xor2                                            : 10
+ 31-bit comparator greater                             : 2
+ 31-bit comparator lessequal                           : 44
+ 32-bit comparator lessequal                           : 2
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 2
+ 39-bit comparator lessequal                           : 2
+ 40-bit comparator lessequal                           : 2
+ 41-bit comparator lessequal                           : 2
+ 7-bit comparator lessequal                            : 8
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 5939
+ 1-bit 12-to-1 multiplexer                             : 12
+ 1-bit 2-to-1 multiplexer                              : 5244
+ 10-bit 2-to-1 multiplexer                             : 56
+ 2-bit 193-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 576
+ 3-bit 2-to-1 multiplexer                              : 4
+ 31-bit 2-to-1 multiplexer                             : 13
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 24
+ 7-bit 2-to-1 multiplexer                              : 8
+# Xors                                                 : 13
+ 1-bit xor2                                            : 13
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1426 - The value init of the FF/Latch particle_array[0]_dx hinder the constant cleaning in the block MAIN.
+   You should achieve better results by setting this init to 1.
 
 Synthesizing (advanced) Unit <MAIN>.
+The following registers are absorbed into counter <start_counter>: 1 register on signal <start_counter>.
+The following registers are absorbed into counter <brick_i>: 1 register on signal <brick_i>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
 The following registers are absorbed into counter <game_counter>: 1 register on signal <game_counter>.
 The following registers are absorbed into counter <y>: 1 register on signal <y>.
-	Multiplier <Mmult_n1742> in block <MAIN> and adder/subtractor <Madd_n2041> in block <MAIN> are combined into a MAC<Maddsub_n1742>.
-	Multiplier <Mmult_n1745> in block <MAIN> and adder/subtractor <Madd_n2048> in block <MAIN> are combined into a MAC<Maddsub_n1745>.
-	Multiplier <Mmult_n1748> in block <MAIN> and adder/subtractor <Madd_n2055> in block <MAIN> are combined into a MAC<Maddsub_n1748>.
+	Multiplier <Mmult_PWR_5_o_BUS_0118_MuLt_1003_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1007_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0118_MuLt_1003_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0126_MuLt_1028_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1032_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0126_MuLt_1028_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0134_MuLt_1053_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1057_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0134_MuLt_1053_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0150_MuLt_1102_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1106_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0150_MuLt_1102_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0158_MuLt_1127_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1131_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0158_MuLt_1127_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0166_MuLt_1152_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1156_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0166_MuLt_1152_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0174_MuLt_1177_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1181_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0174_MuLt_1177_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0182_MuLt_1202_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1206_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0182_MuLt_1202_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0190_MuLt_1227_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1231_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0190_MuLt_1227_OUT>.
+	Multiplier <Mmult_PWR_5_o_BUS_0198_MuLt_1252_OUT> in block <MAIN> and adder/subtractor <Madd_GND_5_o_GND_5_o_add_1256_OUT> in block <MAIN> are combined into a MAC<Maddsub_PWR_5_o_BUS_0198_MuLt_1252_OUT>.
+	Multiplier <Mmult_brick_i[3]_BUS_0031_MuLt_149_OUT> in block <MAIN> and adder/subtractor <Msub_GND_5_o_GND_5_o_sub_151_OUT<9:0>> in block <MAIN> are combined into a MAC<Maddsub_brick_i[3]_BUS_0031_MuLt_149_OUT>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8277> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 6-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <brick_i<7:4>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
 Unit <MAIN> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# MACs                                                 : 3
- 7x3-to-11-bit MAC                                     : 3
-# Multipliers                                          : 18
+# RAMs                                                 : 1
+ 16x6-bit single-port distributed Read Only RAM        : 1
+# MACs                                                 : 11
+ 7x3-to-10-bit MAC                                     : 3
+ 7x4-to-10-bit MAC                                     : 8
+# Multipliers                                          : 12
  12x12-bit multiplier                                  : 2
  4x4-bit multiplier                                    : 1
  5x2-bit multiplier                                    : 1
  5x3-bit multiplier                                    : 3
- 5x4-bit multiplier                                    : 3
+ 5x4-bit multiplier                                    : 4
  7x2-bit multiplier                                    : 1
- 7x4-bit multiplier                                    : 7
-# Adders/Subtractors                                   : 76
- 10-bit adder                                          : 17
- 11-bit adder                                          : 27
- 11-bit subtractor                                     : 2
- 12-bit adder                                          : 18
+# Adders/Subtractors                                   : 211
+ 10-bit adder                                          : 60
+ 11-bit adder                                          : 42
+ 11-bit subtractor                                     : 4
+ 12-bit adder                                          : 7
  12-bit subtractor                                     : 2
- 2-bit subtractor                                      : 2
+ 2-bit subtractor                                      : 3
  20-bit adder                                          : 1
  25-bit adder                                          : 1
- 5-bit subtractor                                      : 6
-# Counters                                             : 3
+ 31-bit adder                                          : 64
+ 31-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 8
+ 7-bit adder                                           : 15
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 5
  10-bit up counter                                     : 2
  20-bit up counter                                     : 1
-# Registers                                            : 55
- Flip-Flops                                            : 55
-# Comparators                                          : 93
- 10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 19
- 11-bit comparator greater                             : 15
- 11-bit comparator lessequal                           : 31
- 12-bit comparator greater                             : 23
+ 31-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 609
+ Flip-Flops                                            : 609
+# Comparators                                          : 254
+ 10-bit comparator greater                             : 23
+ 10-bit comparator lessequal                           : 63
+ 11-bit comparator greater                             : 40
+ 11-bit comparator lessequal                           : 25
+ 12-bit comparator greater                             : 11
+ 12-bit comparator lessequal                           : 3
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
  25-bit comparator lessequal                           : 1
-# Multiplexers                                         : 611
- 1-bit 2-to-1 multiplexer                              : 579
- 10-bit 2-to-1 multiplexer                             : 18
- 5-bit 2-to-1 multiplexer                              : 14
-# Xors                                                 : 10
- 1-bit xor2                                            : 10
+ 31-bit comparator greater                             : 2
+ 31-bit comparator lessequal                           : 44
+ 32-bit comparator lessequal                           : 2
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 2
+ 39-bit comparator lessequal                           : 2
+ 40-bit comparator lessequal                           : 2
+ 41-bit comparator lessequal                           : 2
+ 7-bit comparator lessequal                            : 8
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 6079
+ 1-bit 12-to-1 multiplexer                             : 12
+ 1-bit 2-to-1 multiplexer                              : 5398
+ 10-bit 2-to-1 multiplexer                             : 48
+ 2-bit 193-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 576
+ 31-bit 2-to-1 multiplexer                             : 11
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 24
+ 7-bit 2-to-1 multiplexer                              : 8
+# Xors                                                 : 13
+ 1-bit xor2                                            : 13
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <player1_x_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch particle_array[0]_dx hinder the constant cleaning in the block MAIN.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <player1_dx_0> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <player2_dx_0> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <player1_x_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <player2_x_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ball_x_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ball_y_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <MAIN> ...
 WARNING:Xst:1293 - FF/Latch <ball_dx_0> has a constant value of 1 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ball_dy_0> has a constant value of 1 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_counter_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_counter_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_counter_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <x_0> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_0> 
-INFO:Xst:2261 - The FF/Latch <x_1> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_1> 
+WARNING:Xst:1293 - FF/Latch <ball_y_9> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <particle_time_6> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_30> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_29> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_28> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_27> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_26> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_25> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_24> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_23> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_22> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_21> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_20> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_19> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_18> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_17> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_16> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_15> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzzer_counter_14> has a constant value of 0 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <brick_i_2> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_2> 
+INFO:Xst:2261 - The FF/Latch <brick_i_3> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_3> 
+INFO:Xst:2261 - The FF/Latch <brick_i_4> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_4> 
+INFO:Xst:2261 - The FF/Latch <brick_i_5> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <game_counter_5> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_0> in Unit <MAIN> is equivalent to the following 3 FFs/Latches, which will be removed : <particle_array[1]_y_0> <particle_array[2]_y_0> <particle_array[3]_y_0> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_1> in Unit <MAIN> is equivalent to the following 3 FFs/Latches, which will be removed : <particle_array[1]_y_1> <particle_array[2]_y_1> <particle_array[3]_y_1> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_2> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_2> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_3> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_3> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_4> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_4> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_5> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_5> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_6> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_6> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_7> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_7> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_8> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_8> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_y_9> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[1]_y_9> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_2> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_2> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_3> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_3> 
+INFO:Xst:2261 - The FF/Latch <x_0> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <brick_i_0> <game_counter_0> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_4> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_4> 
+INFO:Xst:2261 - The FF/Latch <x_1> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <brick_i_1> <game_counter_1> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_5> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_5> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_6> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_6> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_7> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_7> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_8> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_8> 
+INFO:Xst:2261 - The FF/Latch <particle_array[1]_x_9> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_x_9> 
+INFO:Xst:2261 - The FF/Latch <player1_dx_2> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <player1_dx_3> <player1_dx_4> 
 INFO:Xst:2261 - The FF/Latch <ball_dx_1> in Unit <MAIN> is equivalent to the following 3 FFs/Latches, which will be removed : <ball_dx_2> <ball_dx_3> <ball_dx_4> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_2> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_2> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_3> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_3> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_4> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_4> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_5> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_5> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_6> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_6> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_7> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_7> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_8> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_8> 
+INFO:Xst:2261 - The FF/Latch <particle_array[2]_y_9> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[3]_y_9> 
 INFO:Xst:2261 - The FF/Latch <ball_dy_1> in Unit <MAIN> is equivalent to the following 3 FFs/Latches, which will be removed : <ball_dy_2> <ball_dy_3> <ball_dy_4> 
+INFO:Xst:2261 - The FF/Latch <player2_dx_2> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <player2_dx_3> <player2_dx_4> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_0> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <particle_array[1]_x_0> <particle_array[3]_x_0> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_1> in Unit <MAIN> is equivalent to the following 3 FFs/Latches, which will be removed : <particle_array[1]_x_1> <particle_array[2]_x_1> <particle_array[3]_x_1> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_2> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_2> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_3> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_3> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_4> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_4> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_5> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_5> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_6> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_6> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_7> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_7> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_8> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_8> 
+INFO:Xst:2261 - The FF/Latch <particle_array[0]_x_9> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <particle_array[2]_x_9> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MAIN, actual ratio is 17.
-FlipFlop ball_x_3 has been replicated 1 time(s)
-FlipFlop ball_x_4 has been replicated 3 time(s)
-FlipFlop ball_x_5 has been replicated 1 time(s)
-FlipFlop ball_x_6 has been replicated 3 time(s)
-FlipFlop ball_x_7 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block MAIN, actual ratio is 107.
+Optimizing block <MAIN> to meet ratio 100 (+ 5) of 1430 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <MAIN>, final ratio is 115.
+FlipFlop ball_dx_1 has been replicated 3 time(s)
+FlipFlop ball_dy_1 has been replicated 1 time(s)
+FlipFlop ball_x_3 has been replicated 8 time(s)
+FlipFlop ball_x_4 has been replicated 6 time(s)
+FlipFlop ball_x_5 has been replicated 3 time(s)
+FlipFlop ball_x_6 has been replicated 1 time(s)
+FlipFlop ball_x_9 has been replicated 3 time(s)
+FlipFlop ball_y_3 has been replicated 5 time(s)
+FlipFlop ball_y_4 has been replicated 5 time(s)
+FlipFlop ball_y_5 has been replicated 1 time(s)
+FlipFlop ball_y_6 has been replicated 7 time(s)
+FlipFlop ball_y_7 has been replicated 7 time(s)
+FlipFlop ball_y_8 has been replicated 7 time(s)
+FlipFlop player1_x_8 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -511,8 +1302,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 87
- Flip-Flops                                            : 87
+# Registers                                            : 662
+ Flip-Flops                                            : 662
 
 =========================================================================
 
@@ -535,32 +1326,32 @@ Top Level Output File Name         : MAIN.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1333
+# BELS                             : 8439
 #      GND                         : 1
-#      INV                         : 12
-#      LUT1                        : 51
-#      LUT2                        : 56
-#      LUT3                        : 92
-#      LUT4                        : 197
-#      LUT5                        : 137
-#      LUT6                        : 364
-#      MUXCY                       : 233
-#      MUXF7                       : 8
+#      INV                         : 14
+#      LUT1                        : 96
+#      LUT2                        : 271
+#      LUT3                        : 557
+#      LUT4                        : 580
+#      LUT5                        : 1391
+#      LUT6                        : 3189
+#      MUXCY                       : 1192
+#      MUXF7                       : 148
+#      MUXF8                       : 24
 #      VCC                         : 1
-#      XORCY                       : 181
-# FlipFlops/Latches                : 87
-#      FD                          : 45
-#      FDE                         : 2
-#      FDR                         : 29
+#      XORCY                       : 975
+# FlipFlops/Latches                : 662
+#      FD                          : 574
+#      FDE                         : 37
+#      FDR                         : 41
 #      FDRE                        : 10
-#      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 9
+# IO Buffers                       : 10
 #      IBUF                        : 4
-#      OBUF                        : 5
-# DSPs                             : 2
-#      DSP48A1                     : 2
+#      OBUF                        : 6
+# DSPs                             : 3
+#      DSP48A1                     : 3
 
 Device utilization summary:
 ---------------------------
@@ -569,24 +1360,26 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              87  out of  11440     0%  
- Number of Slice LUTs:                  909  out of   5720    15%  
-    Number used as Logic:               909  out of   5720    15%  
+ Number of Slice Registers:             662  out of  11440     5%  
+ Number of Slice LUTs:                 6098  out of   5720   106% (*) 
+    Number used as Logic:              6098  out of   5720   106% (*) 
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    987
-   Number with an unused Flip Flop:     900  out of    987    91%  
-   Number with an unused LUT:            78  out of    987     7%  
-   Number of fully used LUT-FF pairs:     9  out of    987     0%  
-   Number of unique control sets:         9
+ Number of LUT Flip Flop pairs used:   6651
+   Number with an unused Flip Flop:    5989  out of   6651    90%  
+   Number with an unused LUT:           553  out of   6651     8%  
+   Number of fully used LUT-FF pairs:   109  out of   6651     1%  
+   Number of unique control sets:        10
 
 IO Utilization: 
- Number of IOs:                          10
- Number of bonded IOBs:                  10  out of    102     9%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    102    10%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
- Number of DSP48A1s:                      2  out of     16    12%  
+ Number of DSP48A1s:                      3  out of     16    18%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -609,7 +1402,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLOCK                              | BUFGP                  | 87    |
+CLOCK                              | BUFGP                  | 662   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -620,8 +1413,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 23.649ns (Maximum Frequency: 42.285MHz)
-   Minimum input arrival time before clock: 14.581ns
+   Minimum period: 94.704ns (Maximum Frequency: 10.559MHz)
+   Minimum input arrival time before clock: 88.097ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -631,118 +1424,300 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLOCK'
-  Clock period: 23.649ns (frequency: 42.285MHz)
-  Total number of paths / destination ports: 14365308913808 / 137
+  Clock period: 94.704ns (frequency: 10.559MHz)
+  Total number of paths / destination ports: 4223878998132734663510801112145526935699587072 / 757
 -------------------------------------------------------------------------
-Delay:               23.649ns (Levels of Logic = 52)
-  Source:            player1_x_6 (FF)
-  Destination:       GREEN (FF)
+Delay:               94.704ns (Levels of Logic = 134)
+  Source:            ball_y_2 (FF)
+  Destination:       RED (FF)
   Source Clock:      CLOCK rising
   Destination Clock: CLOCK rising
 
-  Data Path: player1_x_6 to GREEN
+  Data Path: ball_y_2 to RED
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              15   0.447   1.210  player1_x_6 (player1_x_6)
-     LUT3:I0->O            4   0.205   0.931  Madd_n2230_xor<6>11 (n2230<6>)
-     LUT4:I0->O            1   0.203   0.000  Mcompar_ball_x[9]_BUS_0006_LessThan_26_o_lut<3> (Mcompar_ball_x[9]_BUS_0006_LessThan_26_o_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  Mcompar_ball_x[9]_BUS_0006_LessThan_26_o_cy<3> (Mcompar_ball_x[9]_BUS_0006_LessThan_26_o_cy<3>)
-     MUXCY:CI->O          37   0.213   1.467  Mcompar_ball_x[9]_BUS_0006_LessThan_26_o_cy<4> (ball_x[9]_BUS_0006_LessThan_26_o)
-     LUT2:I0->O           10   0.203   0.857  player1_x[9]_ball_x[9]_OR_34_o1 (player1_x[9]_ball_x[9]_OR_34_o)
-     LUT6:I5->O            1   0.205   0.580  Madd_n2238_xor<9>11_SW0 (N201)
-     LUT6:I5->O            2   0.205   0.864  Madd_n2238_xor<9>11 (n2238<9>)
-     LUT4:I0->O            0   0.203   0.000  Mcompar_player2_x[9]_BUS_0011_LessThan_46_o_lutdi4 (Mcompar_player2_x[9]_BUS_0011_LessThan_46_o_lutdi4)
-     MUXCY:DI->O          33   0.145   1.306  Mcompar_player2_x[9]_BUS_0011_LessThan_46_o_cy<4> (Mcompar_player2_x[9]_BUS_0011_LessThan_46_o_cy<4>)
-     LUT6:I5->O            1   0.205   0.000  Madd_ball_x[9]_ball_dx[4]_add_86_OUT_lut<0>1 (Madd_ball_x[9]_ball_dx[4]_add_86_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<0> (Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<1> (Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<2> (Madd_ball_x[9]_ball_dx[4]_add_86_OUT_cy<2>)
-     XORCY:CI->O           8   0.180   1.031  Madd_ball_x[9]_ball_dx[4]_add_86_OUT_xor<3> (ball_x[9]_ball_dx[4]_add_86_OUT<3>)
-     LUT4:I1->O            2   0.205   0.617  GND_5_o_ball_x[9]_LessThan_90_o1_SW0 (N92)
-     LUT5:I4->O            1   0.205   0.684  Mmux_ball_x[9]_GND_5_o_mux_151_OUT11_SW0 (N444)
-     LUT6:I4->O            9   0.203   0.830  Mmux_ball_x[9]_GND_5_o_mux_151_OUT11 (Madd_n2286_cy<0>)
-     LUT6:I5->O            1   0.205   0.808  Madd_n2286_xor<7>11 (Madd_BUS_0030_GND_5_o_add_164_OUT_lut<7>)
-     LUT6:I3->O            1   0.205   0.000  Msub_GND_5_o_GND_5_o_sub_168_OUT_lut<7> (Msub_GND_5_o_GND_5_o_sub_168_OUT_lut<7>)
-     MUXCY:S->O            1   0.172   0.000  Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<7> (Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<8> (Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<9> (Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<9>)
-     MUXCY:CI->O           0   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<10> (Msub_GND_5_o_GND_5_o_sub_168_OUT_cy<10>)
-     XORCY:CI->O          14   0.180   0.957  Msub_GND_5_o_GND_5_o_sub_168_OUT_xor<11> (GND_5_o_GND_5_o_sub_168_OUT<11>)
-     DSP48A1:B11->M0       1   3.364   0.580  Mmult_GND_5_o_GND_5_o_MuLt_169_OUT (GND_5_o_GND_5_o_MuLt_169_OUT<0>)
-     LUT2:I1->O            1   0.205   0.000  Madd_n2297_lut<0> (Madd_n2297_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Madd_n2297_cy<0> (Madd_n2297_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<1> (Madd_n2297_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<2> (Madd_n2297_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<3> (Madd_n2297_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<4> (Madd_n2297_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<5> (Madd_n2297_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<6> (Madd_n2297_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<7> (Madd_n2297_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<8> (Madd_n2297_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<9> (Madd_n2297_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<10> (Madd_n2297_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<11> (Madd_n2297_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<12> (Madd_n2297_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<13> (Madd_n2297_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<14> (Madd_n2297_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<15> (Madd_n2297_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<16> (Madd_n2297_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<17> (Madd_n2297_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<18> (Madd_n2297_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n2297_cy<19> (Madd_n2297_cy<19>)
-     XORCY:CI->O           1   0.180   0.924  Madd_n2297_xor<20> (n2297<20>)
-     LUT6:I1->O            1   0.203   0.000  Mcompar_GND_5_o_BUS_0034_LessThan_176_o_lut<4> (Mcompar_GND_5_o_BUS_0034_LessThan_176_o_lut<4>)
-     MUXCY:S->O            3   0.172   0.000  Mcompar_GND_5_o_BUS_0034_LessThan_176_o_cy<4> (GND_5_o_BUS_0034_LessThan_176_o)
-     MUXCY:CI->O           1   0.019   0.000  Mmux_GND_5_o_GND_5_o_MUX_784_o94_cy (GND_5_o_BUS_0034_LessThan_176_o_l1)
-     MUXCY:CI->O           1   0.213   0.580  Mmux_GND_5_o_GND_5_o_MUX_784_o94_cy1 (Mmux_GND_5_o_GND_5_o_MUX_784_o93)
-     LUT6:I5->O            1   0.205   0.000  GREEN_glue_set (GREEN_glue_set)
-     FDR:D                     0.102          GREEN
+     FD:C->Q              14   0.447   1.205  ball_y_2 (ball_y_2)
+     LUT4:I0->O           13   0.203   0.933  GND_5_o_ball_y[9]_equal_22_o<9>_SW0_1 (GND_5_o_ball_y[9]_equal_22_o<9>_SW0)
+     LUT6:I5->O            8   0.205   1.031  n7184<0>_mand11 (n7184<0>_mand1)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_lut<0> (Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<0> (Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<1> (Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<2> (Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<3> (Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<3>)
+     MUXCY:CI->O          11   0.213   0.987  Mcompar_ball_x[9]_BUS_0007_LessThan_38_o_cy<4> (ball_x[9]_BUS_0007_LessThan_38_o)
+     LUT6:I4->O           19   0.203   1.072  Mmux_n719691_SW0 (N609)
+     LUT6:I5->O           20   0.205   1.093  Mmux_n719671 (Madd_n7191_lut<6>)
+     LUT6:I5->O            2   0.205   0.617  Madd_n7191_cy<8>11 (Madd_n7191_cy<8>)
+     LUT2:I1->O            2   0.205   0.864  Madd_n7191_xor<9>11 (n7191<9>)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_player2_x[9]_BUS_0012_LessThan_58_o_lutdi4 (Mcompar_player2_x[9]_BUS_0012_LessThan_58_o_lutdi4)
+     MUXCY:DI->O          43   0.145   1.449  Mcompar_player2_x[9]_BUS_0012_LessThan_58_o_cy<4> (Mcompar_player2_x[9]_BUS_0012_LessThan_58_o_cy<4>)
+     LUT6:I5->O            5   0.205   0.715  Mmux_n720841 (n7208<3>)
+     LUT6:I5->O            1   0.205   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_lut<3> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<3> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<4> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<5> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<6> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<7> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<8> (Madd_ball_x[9]_ball_dx[4]_add_99_OUT_cy<8>)
+     XORCY:CI->O          11   0.180   0.883  Madd_ball_x[9]_ball_dx[4]_add_99_OUT_xor<9> (ball_x[9]_ball_dx[4]_add_99_OUT<9>)
+     LUT5:I4->O           11   0.205   0.883  Mmux_ball_x[9]_ball_x[9]_mux_101_OUT101 (ball_x[9]_ball_x[9]_mux_101_OUT<9>)
+     LUT5:I4->O           17   0.205   1.028  ball_x[9]_GND_5_o_LessThan_106_o14 (ball_x[9]_GND_5_o_LessThan_106_o)
+     LUT5:I4->O           19   0.205   1.319  Mmux_n727531 (Madd_n7241_lut<2>)
+     LUT4:I0->O            1   0.203   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_lut<1> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<1> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<2> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<3> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<3>)
+     MUXCY:CI->O          18   0.213   1.154  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<4> (GND_5_o_ball_x[9]_LessThan_243_o)
+     LUT2:I0->O           19   0.203   1.072  GND_5_o_ball_x[9]_OR_48_o1 (GND_5_o_ball_x[9]_OR_48_o)
+     LUT6:I5->O            3   0.205   1.015  score[30]_PWR_5_o_div_6317_OUT<21>1_SW0 (N360)
+     LUT6:I0->O            2   0.203   0.721  score[30]_PWR_5_o_div_6317_OUT<21>1_1 (score[30]_PWR_5_o_div_6317_OUT<21>1)
+     LUT6:I4->O            7   0.203   0.774  score[30]_PWR_5_o_div_6317_OUT<20>11_1 (score[30]_PWR_5_o_div_6317_OUT<20>11)
+     LUT5:I4->O           11   0.205   1.111  score[30]_PWR_5_o_div_6317/Mmux_a[0]_a[30]_MUX_4347_o1171 (score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_25_OUT_lut<25>)
+     LUT6:I3->O            1   0.205   0.580  score[30]_PWR_5_o_div_6317_OUT<19>1_1 (score[30]_PWR_5_o_div_6317_OUT<19>1)
+     LUT6:I5->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o11 (score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o11)
+     LUT6:I5->O            4   0.205   0.684  score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o1_1 (score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o1)
+     LUT6:I5->O            7   0.205   1.118  score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_29_OUT_lut<26>_1 (score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_29_OUT_lut<26>1)
+     LUT6:I1->O           17   0.203   1.028  score[30]_PWR_5_o_div_6317_OUT<17>1 (score[30]_PWR_5_o_div_6317_OUT<17>)
+     LUT6:I5->O           10   0.205   0.961  score[30]_PWR_5_o_mod_6461/BUS_0016_INV_1770_o12_1 (score[30]_PWR_5_o_mod_6461/BUS_0016_INV_1770_o12)
+     LUT6:I4->O           18   0.203   1.154  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5605_o1231 (score[30]_PWR_5_o_mod_6461/a[30]_a[30]_MUX_5575_o)
+     LUT6:I4->O           18   0.203   1.050  score[30]_PWR_5_o_mod_6461/BUS_0017_INV_1802_o21 (score[30]_PWR_5_o_mod_6461/BUS_0017_INV_1802_o2)
+     LUT6:I5->O            7   0.205   1.021  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5636_o1121 (score[30]_PWR_5_o_mod_6461/a[20]_a[30]_MUX_5616_o)
+     LUT5:I1->O            1   0.203   0.580  score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o22_1 (score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o22)
+     LUT6:I5->O            5   0.205   0.715  score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o23_1 (score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o23)
+     LUT6:I5->O            1   0.205   0.684  score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o21_1 (score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o211)
+     LUT6:I4->O            3   0.203   0.650  score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o23_1 (score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o23)
+     MUXF7:S->O           12   0.148   1.013  score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o21 (score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o2)
+     LUT6:I4->O           19   0.203   1.072  score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o25 (score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o)
+     LUT6:I5->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o21 (score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o2)
+     LUT4:I3->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o24_SW4 (N1939)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o23 (score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o22)
+     LUT6:I5->O            2   0.205   0.721  score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o25_SW27_SW0 (N3051)
+     LUT6:I4->O            5   0.203   1.079  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5791_o1181 (score[30]_PWR_5_o_mod_6461/a[26]_a[30]_MUX_5765_o)
+     LUT6:I0->O            8   0.203   0.803  score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o32_1 (score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o321)
+     LUT5:I4->O           14   0.205   0.958  score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o34 (score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o)
+     LUT6:I5->O           15   0.205   1.229  score[30]_PWR_5_o_mod_6461/BUS_0024_INV_2026_o32 (score[30]_PWR_5_o_mod_6461/BUS_0024_INV_2026_o31)
+     LUT6:I2->O            6   0.203   1.089  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5853_o151 (score[30]_PWR_5_o_mod_6461/a[14]_a[30]_MUX_5839_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<3>)
+     MUXCY:CI->O          78   0.213   1.733  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0025_INV_2058_o)
+     LUT5:I4->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5884_o141 (score[30]_PWR_5_o_mod_6461/a[13]_a[30]_MUX_5871_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<3>)
+     MUXCY:CI->O          84   0.213   1.772  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0026_INV_2090_o)
+     LUT5:I4->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5915_o131 (score[30]_PWR_5_o_mod_6461/a[12]_a[30]_MUX_5903_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<3>)
+     MUXCY:CI->O          74   0.213   1.706  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0027_INV_2122_o)
+     LUT3:I2->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5946_o121 (score[30]_PWR_5_o_mod_6461/a[11]_a[30]_MUX_5935_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<3>)
+     MUXCY:CI->O          92   0.213   1.825  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0028_INV_2154_o)
+     LUT5:I4->O            5   0.205   1.059  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5977_o111 (score[30]_PWR_5_o_mod_6461/a[10]_a[30]_MUX_5967_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<3>)
+     MUXCY:CI->O         100   0.213   1.878  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0029_INV_2186_o)
+     LUT3:I2->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6008_o1301 (score[30]_PWR_5_o_mod_6461/a[9]_a[30]_MUX_5999_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<4>)
+     MUXCY:CI->O          79   0.213   1.739  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0030_INV_2218_o)
+     LUT5:I4->O            2   0.205   0.961  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6039_o1291 (score[30]_PWR_5_o_mod_6461/a[8]_a[30]_MUX_6031_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<4>)
+     MUXCY:CI->O          36   0.213   1.349  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0031_INV_2250_o)
+     LUT5:I4->O           15   0.205   1.326  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6070_o1281 (score[30]_PWR_5_o_mod_6461/Madd_a[30]_GND_12_o_add_63_OUT_Madd_lut<7>)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<4>)
+     MUXCY:CI->O          33   0.019   1.306  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0032_INV_2282_o)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_mod_6461/Mmux_o61 (score[30]_PWR_5_o_div_6462/Madd_a[9]_b[6]_add_15_OUT[9:0]_cy<5>)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_div_6462_OUT<3>1 (score[30]_PWR_5_o_div_6462_OUT<3>)
+     LUT6:I5->O           17   0.205   1.028  score[30]_PWR_5_o_div_6462/Mmux_n0403911 (score[30]_PWR_5_o_div_6462/Mmux_n040391)
+     LUT5:I4->O            7   0.205   1.002  score[30]_PWR_5_o_div_6462/n0403<8>1 (score[30]_PWR_5_o_div_6462/n0403<8>)
+     LUT6:I3->O            2   0.205   0.617  score[30]_PWR_5_o_mod_6606/BUS_0010_INV_2590_o1 (score[30]_PWR_5_o_mod_6606/BUS_0010_INV_2590_o1)
+     LUT6:I5->O           15   0.205   1.086  score[30]_PWR_5_o_mod_6606/BUS_0011_INV_2601_o11 (score[30]_PWR_5_o_mod_6606/BUS_0011_INV_2601_o1)
+     LUT6:I4->O           11   0.203   1.111  score[30]_PWR_5_o_mod_6606/Mmux_o51 (score[30]_PWR_5_o_div_6607/Madd_a[6]_b[3]_add_9_OUT[6:0]_cy<4>)
+     LUT6:I3->O            5   0.205   1.079  score[30]_PWR_5_o_div_6607_OUT<1>1 (score[30]_PWR_5_o_div_6607_OUT<1>)
+     LUT6:I0->O            1   0.203   0.000  Mmux__n8211_5_f7_F_SW0_G (N4395)
+     MUXF7:I1->O           1   0.140   0.580  Mmux__n8211_5_f7_F_SW0 (N4376)
+     LUT6:I5->O            1   0.205   0.000  Mmux__n8211_5_f7_F (N4196)
+     MUXF7:I0->O           6   0.131   0.745  Mmux__n8211_5_f7 (Mmux__n8211_5_f7)
+     LUT6:I5->O            4   0.205   0.684  Mmux_GND_5_o_PWR_5_o_MUX_6776_o11 (GND_5_o_PWR_5_o_MUX_6776_o)
+     LUT6:I5->O            1   0.205   0.827  Mmux_GND_5_o_GND_5_o_MUX_6791_o11 (GND_5_o_GND_5_o_MUX_6791_o)
+     LUT6:I2->O            1   0.203   0.580  Mmux_GND_5_o_GND_5_o_MUX_6842_o_7 (Mmux_GND_5_o_GND_5_o_MUX_6842_o_7)
+     LUT6:I5->O            1   0.205   0.000  score[30]_PWR_5_o_mod_6751_OUT<3>11 (GND_5_o_GND_5_o_MUX_6842_o)
+     FD:D                      0.102          RED
     ----------------------------------------
-    Total                     23.649ns (9.424ns logic, 14.225ns route)
-                                       (39.8% logic, 60.2% route)
+    Total                     94.704ns (20.325ns logic, 74.379ns route)
+                                       (21.5% logic, 78.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
-  Total number of paths / destination ports: 529988 / 21
+  Total number of paths / destination ports: 95482459914123912278893654165136582115328 / 618
 -------------------------------------------------------------------------
-Offset:              14.581ns (Levels of Logic = 20)
+Offset:              88.097ns (Levels of Logic = 120)
   Source:            P1_LEFT (PAD)
-  Destination:       GREEN (FF)
+  Destination:       RED (FF)
   Destination Clock: CLOCK rising
 
-  Data Path: P1_LEFT to GREEN
+  Data Path: P1_LEFT to RED
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.222   0.961  P1_LEFT_IBUF (P1_LEFT_IBUF)
-     LUT3:I1->O            1   0.203   0.000  Madd_player1_x[9]_GND_5_o_add_74_OUT_lut<0> (Madd_player1_x[9]_GND_5_o_add_74_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<0> (Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<1> (Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<2> (Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<3> (Madd_player1_x[9]_GND_5_o_add_74_OUT_cy<3>)
-     XORCY:CI->O           3   0.180   0.898  Madd_player1_x[9]_GND_5_o_add_74_OUT_xor<4> (player1_x[9]_GND_5_o_add_74_OUT<4>)
-     LUT4:I0->O            1   0.203   0.684  GND_5_o_player1_x[9]_LessThan_77_o1_SW0 (N88)
-     LUT6:I4->O            8   0.203   1.050  GND_5_o_player1_x[9]_LessThan_77_o1 (GND_5_o_player1_x[9]_LessThan_77_o)
-     LUT5:I1->O            8   0.203   1.167  Mmux_n229831 (Madd_player1_x[9]_GND_5_o_add_176_OUT_lut<2>)
-     LUT6:I0->O            7   0.203   1.002  Madd_player1_x[9]_GND_5_o_add_176_OUT_cy<5>11 (Madd_player1_x[9]_GND_5_o_add_176_OUT_cy<5>)
-     LUT4:I1->O            2   0.205   0.864  Madd_n1998_xor<6>11 (n1998<6>)
-     LUT4:I0->O            1   0.203   0.000  Mcompar_GND_5_o_BUS_0037_LessThan_181_o_lut<3> (Mcompar_GND_5_o_BUS_0037_LessThan_181_o_lut<3>)
-     MUXCY:S->O            1   0.366   0.684  Mcompar_GND_5_o_BUS_0037_LessThan_181_o_cy<3> (Mcompar_GND_5_o_BUS_0037_LessThan_181_o_cy<3>)
-     LUT6:I4->O            1   0.203   0.944  Mcompar_GND_5_o_BUS_0037_LessThan_181_o_cy<4> (Mcompar_GND_5_o_BUS_0037_LessThan_181_o_cy<4>)
-     LUT6:I0->O            4   0.203   1.028  player1_x[9]_GND_5_o_AND_182_o (player1_x[9]_GND_5_o_AND_182_o)
-     LUT6:I1->O            1   0.203   0.000  Mmux_GND_5_o_GND_5_o_MUX_784_o94_lut (Mmux_GND_5_o_GND_5_o_MUX_784_o94_lut)
-     MUXCY:S->O            1   0.172   0.000  Mmux_GND_5_o_GND_5_o_MUX_784_o94_cy (GND_5_o_BUS_0034_LessThan_176_o_l1)
-     MUXCY:CI->O           1   0.213   0.580  Mmux_GND_5_o_GND_5_o_MUX_784_o94_cy1 (Mmux_GND_5_o_GND_5_o_MUX_784_o93)
-     LUT6:I5->O            1   0.205   0.000  GREEN_glue_set (GREEN_glue_set)
-     FDR:D                     0.102          GREEN
+     IBUF:I->O            56   1.222   1.835  P1_LEFT_IBUF (P1_LEFT_IBUF)
+     LUT4:I0->O            5   0.203   1.079  P1_LEFT_P2_RIGHT_AND_3_o1 (P1_LEFT_P2_RIGHT_AND_3_o_inv_inv)
+     LUT6:I0->O            1   0.203   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_lut<2> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<2> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<3> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<4> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<5> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<5>)
+     MUXCY:CI->O         112   0.019   2.137  Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<6> (Mcompar_GND_5_o_GND_5_o_LessThan_5_o_cy<6>)
+     LUT5:I2->O            4   0.205   0.684  Mmux_ball_x[9]_ball_x[9]_mux_101_OUT21 (ball_x[9]_ball_x[9]_mux_101_OUT<1>)
+     LUT6:I5->O            8   0.205   0.907  GND_5_o_ball_x[9]_LessThan_105_o1_SW0 (N306)
+     LUT6:I4->O           10   0.203   0.961  GND_5_o_ball_x[9]_LessThan_105_o1 (GND_5_o_ball_x[9]_LessThan_105_o)
+     LUT5:I3->O           19   0.203   1.319  Mmux_n727531 (Madd_n7241_lut<2>)
+     LUT4:I0->O            1   0.203   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_lut<1> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<1> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<2> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<3> (Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<3>)
+     MUXCY:CI->O          18   0.213   1.154  Mcompar_GND_5_o_ball_x[9]_LessThan_243_o_cy<4> (GND_5_o_ball_x[9]_LessThan_243_o)
+     LUT2:I0->O           19   0.203   1.072  GND_5_o_ball_x[9]_OR_48_o1 (GND_5_o_ball_x[9]_OR_48_o)
+     LUT6:I5->O            3   0.205   1.015  score[30]_PWR_5_o_div_6317_OUT<21>1_SW0 (N360)
+     LUT6:I0->O            2   0.203   0.721  score[30]_PWR_5_o_div_6317_OUT<21>1_1 (score[30]_PWR_5_o_div_6317_OUT<21>1)
+     LUT6:I4->O            7   0.203   0.774  score[30]_PWR_5_o_div_6317_OUT<20>11_1 (score[30]_PWR_5_o_div_6317_OUT<20>11)
+     LUT5:I4->O           11   0.205   1.111  score[30]_PWR_5_o_div_6317/Mmux_a[0]_a[30]_MUX_4347_o1171 (score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_25_OUT_lut<25>)
+     LUT6:I3->O            1   0.205   0.580  score[30]_PWR_5_o_div_6317_OUT<19>1_1 (score[30]_PWR_5_o_div_6317_OUT<19>1)
+     LUT6:I5->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o11 (score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o11)
+     LUT6:I5->O            4   0.205   0.684  score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o1_1 (score[30]_PWR_5_o_mod_6461/BUS_0014_INV_1706_o1)
+     LUT6:I5->O            7   0.205   1.118  score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_29_OUT_lut<26>_1 (score[30]_PWR_5_o_div_6317/Madd_a[30]_GND_11_o_add_29_OUT_lut<26>1)
+     LUT6:I1->O           17   0.203   1.028  score[30]_PWR_5_o_div_6317_OUT<17>1 (score[30]_PWR_5_o_div_6317_OUT<17>)
+     LUT6:I5->O           10   0.205   0.961  score[30]_PWR_5_o_mod_6461/BUS_0016_INV_1770_o12_1 (score[30]_PWR_5_o_mod_6461/BUS_0016_INV_1770_o12)
+     LUT6:I4->O           18   0.203   1.154  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5605_o1231 (score[30]_PWR_5_o_mod_6461/a[30]_a[30]_MUX_5575_o)
+     LUT6:I4->O           18   0.203   1.050  score[30]_PWR_5_o_mod_6461/BUS_0017_INV_1802_o21 (score[30]_PWR_5_o_mod_6461/BUS_0017_INV_1802_o2)
+     LUT6:I5->O            7   0.205   1.021  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5636_o1121 (score[30]_PWR_5_o_mod_6461/a[20]_a[30]_MUX_5616_o)
+     LUT5:I1->O            1   0.203   0.580  score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o22_1 (score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o22)
+     LUT6:I5->O            5   0.205   0.715  score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o23_1 (score[30]_PWR_5_o_mod_6461/BUS_0018_INV_1834_o23)
+     LUT6:I5->O            1   0.205   0.684  score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o21_1 (score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o211)
+     LUT6:I4->O            3   0.203   0.650  score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o23_1 (score[30]_PWR_5_o_mod_6461/BUS_0019_INV_1866_o23)
+     MUXF7:S->O           12   0.148   1.013  score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o21 (score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o2)
+     LUT6:I4->O           19   0.203   1.072  score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o25 (score[30]_PWR_5_o_mod_6461/BUS_0020_INV_1898_o)
+     LUT6:I5->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o21 (score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o2)
+     LUT4:I3->O           15   0.205   0.982  score[30]_PWR_5_o_mod_6461/BUS_0021_INV_1930_o24_SW4 (N1939)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o23 (score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o22)
+     LUT6:I5->O            2   0.205   0.721  score[30]_PWR_5_o_mod_6461/BUS_0022_INV_1962_o25_SW27_SW0 (N3051)
+     LUT6:I4->O            5   0.203   1.079  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5791_o1181 (score[30]_PWR_5_o_mod_6461/a[26]_a[30]_MUX_5765_o)
+     LUT6:I0->O            8   0.203   0.803  score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o32_1 (score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o321)
+     LUT5:I4->O           14   0.205   0.958  score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o34 (score[30]_PWR_5_o_mod_6461/BUS_0023_INV_1994_o)
+     LUT6:I5->O           15   0.205   1.229  score[30]_PWR_5_o_mod_6461/BUS_0024_INV_2026_o32 (score[30]_PWR_5_o_mod_6461/BUS_0024_INV_2026_o31)
+     LUT6:I2->O            6   0.203   1.089  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5853_o151 (score[30]_PWR_5_o_mod_6461/a[14]_a[30]_MUX_5839_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<3>)
+     MUXCY:CI->O          78   0.213   1.733  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0025_INV_2058_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0025_INV_2058_o)
+     LUT5:I4->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5884_o141 (score[30]_PWR_5_o_mod_6461/a[13]_a[30]_MUX_5871_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<3>)
+     MUXCY:CI->O          84   0.213   1.772  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0026_INV_2090_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0026_INV_2090_o)
+     LUT5:I4->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5915_o131 (score[30]_PWR_5_o_mod_6461/a[12]_a[30]_MUX_5903_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<3>)
+     MUXCY:CI->O          74   0.213   1.706  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0027_INV_2122_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0027_INV_2122_o)
+     LUT3:I2->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5946_o121 (score[30]_PWR_5_o_mod_6461/a[11]_a[30]_MUX_5935_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<3>)
+     MUXCY:CI->O          92   0.213   1.825  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0028_INV_2154_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0028_INV_2154_o)
+     LUT5:I4->O            5   0.205   1.059  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_5977_o111 (score[30]_PWR_5_o_mod_6461/a[10]_a[30]_MUX_5967_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<3>)
+     MUXCY:CI->O         100   0.213   1.878  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0029_INV_2186_o_cy<4> (score[30]_PWR_5_o_mod_6461/BUS_0029_INV_2186_o)
+     LUT3:I2->O            4   0.205   1.028  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6008_o1301 (score[30]_PWR_5_o_mod_6461/a[9]_a[30]_MUX_5999_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<4>)
+     MUXCY:CI->O          79   0.213   1.739  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0030_INV_2218_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0030_INV_2218_o)
+     LUT5:I4->O            2   0.205   0.961  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6039_o1291 (score[30]_PWR_5_o_mod_6461/a[8]_a[30]_MUX_6031_o)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<4>)
+     MUXCY:CI->O          36   0.213   1.349  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0031_INV_2250_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0031_INV_2250_o)
+     LUT5:I4->O           15   0.205   1.326  score[30]_PWR_5_o_mod_6461/Mmux_a[0]_a[30]_MUX_6070_o1281 (score[30]_PWR_5_o_mod_6461/Madd_a[30]_GND_12_o_add_63_OUT_Madd_lut<7>)
+     LUT5:I0->O            1   0.203   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_lut<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<0> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<1> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<2> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<3> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<4> (score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<4>)
+     MUXCY:CI->O          33   0.019   1.306  score[30]_PWR_5_o_mod_6461/Mcompar_BUS_0032_INV_2282_o_cy<5> (score[30]_PWR_5_o_mod_6461/BUS_0032_INV_2282_o)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_mod_6461/Mmux_o61 (score[30]_PWR_5_o_div_6462/Madd_a[9]_b[6]_add_15_OUT[9:0]_cy<5>)
+     LUT6:I5->O           19   0.205   1.072  score[30]_PWR_5_o_div_6462_OUT<3>1 (score[30]_PWR_5_o_div_6462_OUT<3>)
+     LUT6:I5->O           17   0.205   1.028  score[30]_PWR_5_o_div_6462/Mmux_n0403911 (score[30]_PWR_5_o_div_6462/Mmux_n040391)
+     LUT5:I4->O            7   0.205   1.002  score[30]_PWR_5_o_div_6462/n0403<8>1 (score[30]_PWR_5_o_div_6462/n0403<8>)
+     LUT6:I3->O            2   0.205   0.617  score[30]_PWR_5_o_mod_6606/BUS_0010_INV_2590_o1 (score[30]_PWR_5_o_mod_6606/BUS_0010_INV_2590_o1)
+     LUT6:I5->O           15   0.205   1.086  score[30]_PWR_5_o_mod_6606/BUS_0011_INV_2601_o11 (score[30]_PWR_5_o_mod_6606/BUS_0011_INV_2601_o1)
+     LUT6:I4->O           11   0.203   1.111  score[30]_PWR_5_o_mod_6606/Mmux_o51 (score[30]_PWR_5_o_div_6607/Madd_a[6]_b[3]_add_9_OUT[6:0]_cy<4>)
+     LUT6:I3->O            5   0.205   1.079  score[30]_PWR_5_o_div_6607_OUT<1>1 (score[30]_PWR_5_o_div_6607_OUT<1>)
+     LUT6:I0->O            1   0.203   0.000  Mmux__n8211_5_f7_F_SW0_G (N4395)
+     MUXF7:I1->O           1   0.140   0.580  Mmux__n8211_5_f7_F_SW0 (N4376)
+     LUT6:I5->O            1   0.205   0.000  Mmux__n8211_5_f7_F (N4196)
+     MUXF7:I0->O           6   0.131   0.745  Mmux__n8211_5_f7 (Mmux__n8211_5_f7)
+     LUT6:I5->O            4   0.205   0.684  Mmux_GND_5_o_PWR_5_o_MUX_6776_o11 (GND_5_o_PWR_5_o_MUX_6776_o)
+     LUT6:I5->O            1   0.205   0.827  Mmux_GND_5_o_GND_5_o_MUX_6791_o11 (GND_5_o_GND_5_o_MUX_6791_o)
+     LUT6:I2->O            1   0.203   0.580  Mmux_GND_5_o_GND_5_o_MUX_6842_o_7 (Mmux_GND_5_o_GND_5_o_MUX_6842_o_7)
+     LUT6:I5->O            1   0.205   0.000  score[30]_PWR_5_o_mod_6751_OUT<3>11 (GND_5_o_GND_5_o_MUX_6842_o)
+     FD:D                      0.102          RED
     ----------------------------------------
-    Total                     14.581ns (4.721ns logic, 9.860ns route)
-                                       (32.4% logic, 67.6% route)
+    Total                     88.097ns (18.877ns logic, 69.219ns route)
+                                       (21.4% logic, 78.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
-  Total number of paths / destination ports: 5 / 5
+  Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
 Offset:              3.597ns (Levels of Logic = 1)
   Source:            HSYNC (FF)
@@ -769,21 +1744,21 @@ Clock to Setup on destination clock CLOCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLOCK          |   23.649|         |         |         |
+CLOCK          |   94.704|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.16 secs
+Total REAL time to Xst completion: 69.00 secs
+Total CPU time to Xst completion: 69.29 secs
  
 --> 
 
 
-Total memory usage is 388584 kilobytes
+Total memory usage is 464572 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   44 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :   47 (   0 filtered)
 
