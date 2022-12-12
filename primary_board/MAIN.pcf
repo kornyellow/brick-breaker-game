@@ -1,10 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 12 04:21:25 2022
+// Written by: Map P.20131013 on Tue Dec 13 00:24:46 2022
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "CLOCK" LOCATE = SITE "P123" LEVEL 1;
 COMP "VSYNC" LOCATE = SITE "P23" LEVEL 1;
+COMP "BUZZER" LOCATE = SITE "P83" LEVEL 1;
 COMP "GREEN" LOCATE = SITE "P7" LEVEL 1;
 COMP "BLUE" LOCATE = SITE "P5" LEVEL 1;
 COMP "P1_RIGHT" LOCATE = SITE "P8" LEVEL 1;
