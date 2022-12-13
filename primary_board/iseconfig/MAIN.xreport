@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-12-13T00:10:33</DateModified>
+  <DateModified>2022-12-13T06:48:53</DateModified>
   <ModuleName>MAIN</ModuleName>
-  <SummaryTimeStamp>2022-12-13T00:10:29</SummaryTimeStamp>
+  <SummaryTimeStamp>2022-12-13T06:07:25</SummaryTimeStamp>
   <SavedFilePath>/home/korn/xilinx/digital-project/primary_board/iseconfig/MAIN.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/korn/xilinx/digital-project/primary_board/</ImplementationReportsDirectory>
   <DateInitialized>2022-12-10T21:03:22</DateInitialized>

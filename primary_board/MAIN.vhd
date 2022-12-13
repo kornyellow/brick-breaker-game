@@ -5,6 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity MAIN is
 	port (
+		START : in std_logic;
 		P1_LEFT : in std_logic;
 		P1_RIGHT : in std_logic;
 		P2_LEFT : in std_logic;
@@ -49,8 +50,8 @@ architecture Behavioral of MAIN is
 		y : integer range -10 to GAME_HEIGHT;
 		dx : integer range -10 to 10;
 		dy : integer range -10 to 10;
-		w : natural range 0 to 100;
-		h : natural range 0 to 100;
+		w : natural range 0 to GAME_WIDTH;
+		h : natural range 0 to GAME_HEIGHT;
 		e : boolean;
 	end record;
 
@@ -127,7 +128,7 @@ architecture Behavioral of MAIN is
 	);
 begin
 
-	process (CLOCK)
+	process (CLOCK, START)
 		-- Function convert std_logic to integer
 		impure function to_integer (
 			s : std_logic ) return natural is
@@ -204,6 +205,29 @@ begin
 			RED <= c.r;
 			GREEN <= c.g;
 			BLUE <= c.b;
+		end procedure;
+
+		procedure draw_rectangle_loose (
+			r : t_rectangle;
+			c : t_colors) is
+			variable xx : natural;
+			variable yy : natural;
+		begin
+			-- Move to viewport
+			xx := r.x + LEFT_BORDER;
+			yy := r.y + UP_BORDER;
+
+			if x >= xx and x < xx + r.w and y >= yy and y < yy + r.h then
+				if y mod 16 = 0 then
+					if x mod 16 = 0 then
+						set_color(c.color1);
+					end if;
+				elsif y mod 16 = 7 then
+					if x mod 16 = 7 then
+						set_color(c.color2);
+					end if;
+				end if;
+			end if;
 		end procedure;
 
 		procedure draw_rectangle (
@@ -301,9 +325,10 @@ begin
 		end procedure;
 
 		variable game_counter : natural range 0 to 1000000 := 0;
+		variable end_counter : natural range 0 to 1000000 := 0;
 
 		variable player1 : t_rectangle := (
-			x => GAME_WIDTH / 2 - 24,
+			x => GAME_WIDTH * 1/4,
 			y => GAME_HEIGHT * 7/8,
 			dx => 0,
 			dy => 0,
@@ -312,8 +337,8 @@ begin
 			e => false
 		);
 		variable player2 : t_rectangle := (
-			x => GAME_WIDTH / 2 - 24,
-			y => GAME_HEIGHT * 7/8 + 30,
+			x => GAME_WIDTH * 3/4,
+			y => GAME_HEIGHT * 7/8,
 			dx => 0,
 			dy => 0,
 			w => 48,
@@ -323,7 +348,7 @@ begin
 
 		variable ball : t_rectangle := (
 			x => GAME_WIDTH / 2,
-			y => GAME_HEIGHT / 2,
+			y => GAME_HEIGHT / 2 - 4,
 			dx => -1,
 			dy => -1,
 			w => 8,
@@ -377,6 +402,9 @@ begin
 			11 => color_pink
 		);
 
+		variable heart : natural range 0 to 4 := 4;
+		variable draw_heart : natural range 0 to 4 := 4;
+
 		variable brick_i : natural range 0 to BRICK_COUNT_X * BRICK_COUNT_Y := 0;
 		variable brick : t_rectangle := (
 			x => 0,
@@ -400,201 +428,250 @@ begin
 		variable brick_color : t_colors;
 
 		variable is_game_start : boolean := false;
-		variable start_counter : natural := 0;
+		variable start_counter : natural range 0 to 100 := 0;
 
-		variable score : natural := 0;
+		variable score : natural range 0 to 999:= 0;
 		variable score_mod : natural := 0;
 		variable display_mod : natural := 0;
 
 		variable buzzer_counter : natural := 0;
-		variable is_buzzed_1 : boolean  := false;
+		variable is_buzzed_1 : boolean := false;
 		variable is_buzzed_2 : boolean := false;
 	begin
 
 		if CLOCK'event and CLOCK = '1' then
-
-			game_counter := game_counter + 1;
-			if game_counter = 80000 then
-				game_counter := 0;
-
-				if is_game_start = false and P1_LEFT = '0' and P1_RIGHT = '0' and P2_LEFT = '0' and P2_RIGHT = '0' then
-					start_counter := start_counter + 1;
-				else
-					start_counter := 0;
-				end if;
-
-				if start_counter > 100 then
-					buzzer_counter := 500000;
-					is_game_start := true;
-					score := 0;
-					start_counter := 0;
-				end if;
-
-				-- Players Movement
-				player1.dx := (to_integer(P1_LEFT) - to_integer(P1_RIGHT)) * 2;
-				player2.dx := (to_integer(P2_LEFT) - to_integer(P2_RIGHT)) * 2;
-
-				-- Ball Bounce to Screen
-				if ball.x = 1 or ball.x = GAME_WIDTH - ball.w then
-					ball.dx := 0 - ball.dx;
-					buzzer_counter := 100000;
-				end if;
-				if ball.y = 1 then
-					ball.dy := 0 - ball.dy;
-					buzzer_counter := 100000;
-				end if;
-
-				if ball.y = GAME_HEIGHT - ball.h then
-					ball.dy := -1;
-					ball.dx := -1;
-					ball.x := GAME_WIDTH / 2;
-					ball.y := GAME_HEIGHT / 2;
-					is_game_start := false;
-					brick_array := ( others => default_brick );
-					buzzer_counter := 15000000;
-				end if;
-
-				-- Ball Bounce to Player
-				ball.e := false;
-				ball := bounce(ball, player1);
-				if ball.e = false then
-					ball := bounce(ball, player2);
-				end if;
-
-				if ball.e then
-					buzzer_counter := 100000;
-				end if;
-
-				if is_game_start then
-					-- Player1 Movement Applied
-					player1.x := player1.x + player1.dx;
-
-					-- Player2 Movement Applied
-					player2.x := player2.x + player2.dx;
-
-					-- Ball Movement Applied
-					ball.x := ball.x + ball.dx;
-					ball.y := ball.y + ball.dy;
-				end if;
-				player1.x := clamp(player1.x, 0, GAME_WIDTH - player1.w);
-				player2.x := clamp(player2.x, 0, GAME_WIDTH - player2.w);
-				ball.x := clamp(ball.x, 0, GAME_WIDTH - ball.w);
-				ball.y := clamp(ball.y, 0, GAME_HEIGHT - ball.h);
-
-				-- Move Particle
-				for i in 0 to 3 loop
-					particle_array(i).x := particle_array(i).x + particle_array(i).dx;
-					particle_array(i).y := particle_array(i).y + particle_array(i).dy;
-				end loop;
-				if particle_time > 0 then
-					particle_time := particle_time - 1;
-				end if;
-
-			end if;
-
-			BUZZER <= '0';
-			if buzzer_counter > 0 then
-				buzzer_counter := buzzer_counter - 1;
-				BUZZER <= '1';
-			end if;
-
 			-- Set Blackscreen
 			RED <= '0';
 			GREEN <= '0';
 			BLUE <= '0';
 
-			-- Move Brick
-			brick.x := (brick_i mod BRICK_COUNT_X) * (brick.w + 2) - 2;
-			brick.y := BRICK_Y_OFFSET + (brick_i / BRICK_COUNT_X) * (brick.h + 2);
+			if START = '1' and end_counter /= 1000000 then
+				end_counter := end_counter + 1;
+			elsif START = '0' then
+				end_counter := 0;
+			end if;
 
-			-- Draw Ball
-			draw_circle(ball, '1', '1', '1');
-
-			-- Draw Player
-			if is_game_start then
-				draw_rectangle(player1, color_orange, false);
-				draw_rectangle(player2, color_teal, false);
+			if end_counter = 1000000 then
+				score := 0;
+				heart := 4;
+				ball.dy := -1;
+				ball.dx := -1;
+				ball.x := GAME_WIDTH / 2;
+				ball.y := GAME_HEIGHT / 2;
+				is_game_start := false;
+				buzzer_counter := 0;
+				BUZZER <= '0';
+				brick_array := ( others => default_brick );
 			else
-				if P1_LEFT = '0' and P1_RIGHT = '0' then
-					if is_buzzed_1 = false then
-						is_buzzed_1 := true;
-						buzzer_counter := 500000;
+				game_counter := game_counter + 1;
+				if game_counter = 100000 then
+					game_counter := 0;
+
+					if is_game_start = false and P1_LEFT = '0' and P1_RIGHT = '0' and P2_LEFT = '0' and P2_RIGHT = '0' then
+						start_counter := start_counter + 1;
+					else
+						start_counter := 0;
 					end if;
-					draw_rectangle(player1, color_orange, false);
-				else
-					is_buzzed_1 := false;
-					draw_rectangle(player1, color_orange, true);
+
+					if start_counter = 100 then
+						buzzer_counter := 500000;
+						is_game_start := true;
+						if heart = 0 then
+							heart := 4;
+							score := 0;
+							brick_array := ( others => default_brick );
+						end if;
+						start_counter := 0;
+					end if;
+
+					-- Players Movement
+					player1.dx := to_integer(P1_LEFT) - to_integer(P1_RIGHT);
+					player2.dx := to_integer(P2_LEFT) - to_integer(P2_RIGHT);
+
+					-- Ball Bounce to Screen
+					if ball.x = 1 or ball.x = GAME_WIDTH - ball.w then
+						ball.dx := 0 - ball.dx;
+						buzzer_counter := 100000;
+					end if;
+					if ball.y = 1 then
+						ball.dy := 0 - ball.dy;
+						buzzer_counter := 100000;
+					end if;
+
+					if ball.y = GAME_HEIGHT - ball.h then
+						heart := heart - 1;
+						ball.dy := -1;
+						ball.dx := -1;
+						ball.x := GAME_WIDTH / 2;
+						ball.y := GAME_HEIGHT / 2;
+						is_game_start := false;
+						buzzer_counter := 15000000;
+					end if;
+
+					-- Ball Bounce to Player
+					ball.e := false;
+					ball := bounce(ball, player1);
+					if ball.e = false then
+						ball := bounce(ball, player2);
+					end if;
+
+					if ball.e then
+						buzzer_counter := 100000;
+					end if;
+
+					if is_game_start then
+						-- Player1 Movement Applied
+						player1.x := player1.x + player1.dx;
+
+						-- Player2 Movement Applied
+						player2.x := player2.x + player2.dx;
+
+						-- Ball Movement Applied
+						ball.x := ball.x + ball.dx;
+						ball.y := ball.y + ball.dy;
+					end if;
+					player1.x := clamp(player1.x, 0, (GAME_WIDTH/2) - player1.w);
+					player2.x := clamp(player2.x, (GAME_WIDTH/2), GAME_WIDTH - player2.w);
+					ball.x := clamp(ball.x, 0, GAME_WIDTH - ball.w);
+					ball.y := clamp(ball.y, 0, GAME_HEIGHT - ball.h);
+
+					-- Move Particle
+					for i in 0 to 3 loop
+						particle_array(i).x := particle_array(i).x + particle_array(i).dx;
+						particle_array(i).y := particle_array(i).y + particle_array(i).dy;
+					end loop;
+					if particle_time > 0 then
+						particle_time := particle_time - 1;
+					end if;
+
 				end if;
-				if P2_LEFT = '0' and P2_RIGHT = '0' then
-					if is_buzzed_2 = false then
-						is_buzzed_2 := true;
-						buzzer_counter := 500000;
-					end if;
+
+				BUZZER <= '0';
+				if buzzer_counter > 0 then
+					buzzer_counter := buzzer_counter - 1;
+					BUZZER <= '1';
+				end if;
+
+
+				-- Move Brick
+				brick.x := (brick_i mod BRICK_COUNT_X) * (brick.w + 2) - 2;
+				brick.y := BRICK_Y_OFFSET + (brick_i / BRICK_COUNT_X) * (brick.h + 2);
+
+				-- Draw Back
+				draw_rectangle_loose((x => 0, y => GAME_HEIGHT*3/4, dx => 0, dy => 0, w => GAME_WIDTH/2, h => GAME_HEIGHT*1/4, e => false), color_orange);
+				draw_rectangle_loose((x => GAME_WIDTH/2, y => GAME_HEIGHT*3/4, dx => 0, dy => 0, w => GAME_WIDTH/2, h => GAME_HEIGHT*1/4, e => false), color_teal);
+
+				-- Draw Ball
+				draw_circle(ball, '1', '1', '1');
+
+				-- Draw Player
+				if is_game_start then
+					draw_rectangle(player1, color_orange, false);
 					draw_rectangle(player2, color_teal, false);
 				else
-					is_buzzed_2 := false;
-					draw_rectangle(player2, color_teal, true);
+					if P1_LEFT = '0' and P1_RIGHT = '0' then
+						if is_buzzed_1 = false then
+							is_buzzed_1 := true;
+							buzzer_counter := 500000;
+						end if;
+						draw_rectangle(player1, color_orange, false);
+					else
+						is_buzzed_1 := false;
+						draw_rectangle(player1, color_orange, true);
+					end if;
+					if P2_LEFT = '0' and P2_RIGHT = '0' then
+						if is_buzzed_2 = false then
+							is_buzzed_2 := true;
+							buzzer_counter := 500000;
+						end if;
+						draw_rectangle(player2, color_teal, false);
+					else
+						is_buzzed_2 := false;
+						draw_rectangle(player2, color_teal, true);
+					end if;
 				end if;
+
+				-- Ball Bounce to Brick
+				if brick_array(brick_i).state > 0 then
+					ball.e := false;
+					ball := bounce(ball, brick);
+					if ball.e then
+						brick_array(brick_i).state := brick_array(brick_i).state - 1;
+						particle_time := 40;
+						brick_color := color_array(brick_i / BRICK_COUNT_X);
+						score := score + 1;
+						buzzer_counter := 500000;
+						for i in 0 to 3 loop
+							particle_array(i).x := ball.x + ball.w / 2;
+							particle_array(i).y := ball.y + ball.h / 2;
+						end loop;
+					end if;
+				end if;
+
+				-- Draw Grid
+				draw_rectangle((x => GAME_WIDTH/2-1, y => GAME_HEIGHT*3/4, dx => 0, dy => 0, w => 2, h => GAME_HEIGHT*1/4, e => false), color_white, true);
+
+				-- Draw Bricks
+				for i in 0 to BRICK_COUNT_Y * BRICK_COUNT_X - 1 loop
+					brick_draw.x := (i mod BRICK_COUNT_X) * (brick.w + BRICK_SPACING);
+					brick_draw.y := BRICK_Y_OFFSET + (i / BRICK_COUNT_X) * (brick.h + BRICK_SPACING);
+					if brick_array(i).state = 2 then
+						draw_rectangle(brick_draw, color_array(i / BRICK_COUNT_X), false);
+					end if;
+					if brick_array(i).state = 1 then
+						draw_rectangle(brick_draw, color_array(i / BRICK_COUNT_X), true);
+					end if;
+				end loop;
+
+				-- Draw Particle
+				particle_array(0).dx := 2;
+				particle_array(0).dy := 2;
+				particle_array(1).dx := -2;
+				particle_array(1).dy := 2;
+				particle_array(2).dx := 2;
+				particle_array(2).dy := -2;
+				particle_array(3).dx := -2;
+				particle_array(3).dy := -2;
+				for i in 0 to 3 loop
+					if particle_time > 0 then
+						draw_rectangle(particle_array(i), brick_color, true);
+					end if;
+				end loop;
+
+				brick_i := brick_i + 1;
+				if brick_i = BRICK_COUNT_X * BRICK_COUNT_Y then
+					brick_i := 0;
+				end if;
+
+				-- Draw score
+				score_mod := score;
+				draw_zero(32, 8);
+				draw_zero(48, 8);
+				draw_score(score_mod / 100, 64, 8);
+				score_mod := score_mod mod 100;
+				draw_score(score_mod / 10, 80, 8);
+				score_mod := score_mod mod 10;
+				draw_score(score_mod, 96, 8);
+
+				-- Draw Heart
+				draw_heart := heart;
+				for i in 0 to 3 loop
+					if draw_heart > 0 then
+						draw_heart := draw_heart - 1;
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 0, y => 8, dx => 0, dy => 0, w => 12, h => 16, e => false), color_red, false);
+
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 0, y => 8, dx => 0, dy => 0, w => 2, h => 2, e => false), color_black, false);
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 5, y => 8, dx => 0, dy => 0, w => 2, h => 2, e => false), color_black, false);
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+10, y => 8, dx => 0, dy => 0, w => 2, h => 2, e => false), color_black, false);
+
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 0, y => 8+10, dx => 0, dy => 0, w => 2, h => 6, e => false), color_black, false);
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+10, y => 8+10, dx => 0, dy => 0, w => 2, h => 6, e => false), color_black, false);
+
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 2, y => 8+13, dx => 0, dy => 0, w => 2, h => 3, e => false), color_black, false);
+						draw_rectangle((x => (GAME_WIDTH*3/4)+(14*i)+ 8, y => 8+13, dx => 0, dy => 0, w => 2, h => 3, e => false), color_black, false);
+					end if;
+				end loop;
 			end if;
-
-			-- Ball Bounce to Brick
-			if brick_array(brick_i).state > 0 then
-				ball.e := false;
-				ball := bounce(ball, brick);
-				if ball.e then
-					brick_array(brick_i).state := brick_array(brick_i).state - 1;
-					particle_time := 40;
-					brick_color := color_array(brick_i / BRICK_COUNT_X);
-					score := score + 1;
-					buzzer_counter := 500000;
-					for i in 0 to 3 loop
-						particle_array(i).x := ball.x + ball.w / 2;
-						particle_array(i).y := ball.y + ball.h / 2;
-					end loop;
-				end if;
-			end if;
-
-			-- Draw Bricks
-			for i in 0 to BRICK_COUNT_Y * BRICK_COUNT_X - 1 loop
-				brick_draw.x := (i mod BRICK_COUNT_X) * (brick.w + BRICK_SPACING);
-				brick_draw.y := BRICK_Y_OFFSET + (i / BRICK_COUNT_X) * (brick.h + BRICK_SPACING);
-				if brick_array(i).state = 2 then
-					draw_rectangle(brick_draw, color_array(i / BRICK_COUNT_X), false);
-				end if;
-				if brick_array(i).state = 1 then
-					draw_rectangle(brick_draw, color_array(i / BRICK_COUNT_X), true);
-				end if;
-			end loop;
-
-			-- Draw Particle
-			particle_array(0).dx := 2;
-			particle_array(0).dy := 2;
-			particle_array(1).dx := -2;
-			particle_array(1).dy := 2;
-			particle_array(2).dx := 2;
-			particle_array(2).dy := -2;
-			particle_array(3).dx := -2;
-			particle_array(3).dy := -2;
-			for i in 0 to 3 loop
-				if particle_time > 0 then
-					draw_rectangle(particle_array(i), brick_color, true);
-				end if;
-			end loop;
-
-			brick_i := brick_i + 1;
-			if brick_i = BRICK_COUNT_X * BRICK_COUNT_Y then
-				brick_i := 0;
-			end if;
-
-			-- Draw score
-			score_mod := score;
-			draw_zero(32, 10);
-			draw_zero(48, 10);
-			draw_score(score_mod / 100, 64, 10);
-			score_mod := score_mod mod 100;
-			draw_score(score_mod / 10, 80, 10);
-			score_mod := score_mod mod 10;
-			draw_score(score_mod, 96, 10);
 
 			-- Hsync and Vsync
 			if x > 0 and x <= X_SYNC_PULSE then
@@ -619,7 +696,6 @@ begin
 			if y = Y_WHOLE_FRAME then
 				y <= 0;
 			end if;
-
 		end if;
 	end process;
 
